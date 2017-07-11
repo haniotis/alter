@@ -1,0 +1,142 @@
+// Generic
+
+.c-section {
+  @include vertical-padding(3rem);
+
+  @include mq(small-up) {
+    @include vertical-padding(4rem);
+  }
+
+  @include mq(medium-up) {
+    @include vertical-padding(6rem);
+  }
+
+  @include mq(large-up) {
+    @include vertical-padding(8rem);
+  }
+
+  @include mq(x-large-up) {
+    @include vertical-padding(10rem);
+  }
+}
+
+.c-section--alt {
+  background-color: $off-white;
+}
+
+.c-section--border {
+  border-top: 1px solid $border-color;
+}
+
+.c-section--dark {
+  background-color: $grey-dark;
+}
+
+.c-section--full-height {
+  height: 100vh;
+}
+
+.c-section--accent {
+  background-color: $primary-color;
+}
+
+
+// Sizes
+
+.c-section--tight {
+  @include vertical-padding(2rem);
+
+  @include mq(small-up) {
+    @include vertical-padding(3rem);
+  }
+
+  @include mq(medium-up) {
+    @include vertical-padding(4rem);
+  }
+
+  @include mq(large-up) {
+    @include vertical-padding(5rem);
+  }
+
+  @include mq(x-large-up) {
+    @include vertical-padding(5.5rem);
+  }
+}
+
+
+
+// Block
+
+.c-section__block {
+  @include vertical-padding(2rem);
+
+  @include mq(small-up) {
+    @include vertical-padding(3rem);
+  }
+
+  @include mq(medium-up) {
+    @include vertical-padding(5rem);
+  }
+
+  @include mq(large-up) {
+    @include vertical-padding(6rem);
+  }
+
+  & + &:not(.c-section__block--maintain-padding):not(.c-section__block--border) {
+    padding-top: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.c-section__block--border {
+  border-top: 1px solid $border-color;
+}
+
+
+// Heading
+
+.c-section__heading {
+  margin-bottom: $spacing-x-large;
+
+  @include mq(small-up) {
+    margin-bottom: $spacing-xxx-large;
+  }
+
+  @include mq(medium-up) {
+    margin-bottom: $spacing-x-large * 2;
+  }
+
+  @include mq(large-up) {
+    margin-bottom: $spacing-x-large * 2.5;
+  }
+}
+
+.c-section__heading--lowlight * {
+  color: $white;
+}
+
+
+// Footer
+
+.c-section__footer {
+  margin-top: $spacing-x-large;
+
+  @include mq(small-up) {
+    margin-top: $spacing-xxx-large;
+  }
+
+  @include mq(medium-up) {
+    margin-top: $spacing-x-large * 2;
+  }
+
+  @include mq(large-up) {
+    margin-top: $spacing-x-large * 2.5;
+  }
+}

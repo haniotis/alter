@@ -1,0 +1,7 @@
+main_menu:
+- title: About Us
+  href: "/about/"
+- title: Our Ventures
+  href: "/ventures/"
+- title: Blog
+  href: "/blog/"

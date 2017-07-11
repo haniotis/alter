@@ -1,0 +1,60 @@
+<div class="c-about-header">
+  <div class="o-container">
+    <h1 class="c-about-header__heading">We <span class="c-about-header__heading-accent js-typed">empower local leaders.</span></h1>
+    <div class="js-typed-strings">
+      <h1>expand frontiers.</h1>
+      <h1>challenge conventional wisdom.</h1>
+      <h1>find the world’s most promising ventures.</h1>
+      <h1>build with the best.</h1>
+      <h1>transform communities.</h1>
+    </div>
+    <h3 class="c-about-header__subheading">Vestibulum id ligula porta felis euismod semper.</h3>
+  </div>
+</div>
+
+<div>
+
+  <div class="c-mission-row">
+    <div class="c-mission-row__figure-wrap">
+      <div class="c-mission-row__figure u-cover"></div>
+    </div>
+    <div class="c-mission-row__content">
+      <div class="c-mission-row__inner">
+        <%= inline_svg("/icons/hamburger.svg", class: "c-mission-row__icon o-icon") %>
+        <h3>Find the best entrepreneurs in frontier markets</h3>
+        <p>Every nation has a few game-changing entrepreneurs that create outsized value. We go out and find the highest character, highest competency management teams leading the most scalable ventures.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-mission-row">
+    <div class="c-mission-row__figure-wrap">
+      <div class="c-mission-row__figure u-cover"></div>
+    </div>
+    <div class="c-mission-row__content">
+      <div class="c-mission-row__inner">
+        <%= inline_svg("/icons/hamburger.svg", class: "c-mission-row__icon o-icon") %>
+        <h3>Connect them to Silicon Valley Resources</h3>
+        <p>Even the best entrepreneurs in frontier markets lack access to the resources they need to scale. We match them with talent, networks, expertise, and investments from the world’s most prolific entrepreneurial ecosystem - Silicon Valley.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-mission-row">
+    <div class="c-mission-row__figure-wrap">
+      <div class="c-mission-row__figure u-cover"></div>
+    </div>
+    <div class="c-mission-row__content">
+      <div class="c-mission-row__inner">
+        <%= inline_svg("/icons/hamburger.svg", class: "c-mission-row__icon o-icon") %>
+        <h3>Create impact at scale</h3>
+        <p>Our ventures scale-up to create thousands of new jobs and deliver essential products and services to millions of people. Our entrepreneurs become role-models that lead the transformation of their own national ecosystems.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<% content_for :page_scripts do %>
+  <%= javascript_include_tag 'about' %>
+<% end %>

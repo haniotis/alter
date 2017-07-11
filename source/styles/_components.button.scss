@@ -1,0 +1,66 @@
+// Base
+
+.c-btn {
+  display: inline-block;
+  padding: 0 1.25rem;
+  height: $button-height-mobile;
+  line-height: $button-height-mobile;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $font-weight-bold;
+  transition: color $animation-time $animation-curve, transform $animation-time $animation-curve, background-color $animation-time $animation-curve, box-shadow $animation-time $animation-curve;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  @include mq(medium-up) {
+    height: $button-height-desktop;
+    line-height: $button-height-desktop;
+    padding: 0 1.75rem;
+    font-size: 13px;
+  }
+}
+
+
+// Types
+
+.c-btn--primary {
+  background-color: $primary-color;
+  color: $white;
+
+  &:hover {
+    background-color: mix($primary-color, $black, 95%);
+  }
+}
+
+.c-btn--secondary {
+  background-color: $secondary-color;
+  color: $white;
+
+  &:hover {
+    background-color: mix($secondary-color, $black, 95%);
+  }
+}
+
+.c-btn--contrast {
+  box-shadow: inset 0 0 0 2px rgba($white, 0.3);
+  color: $white;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $white;
+  }
+}
+
+
+// Group
+
+.c-btn-group {
+  display: inline-flex;
+  margin: -$spacing-small;
+}
+
+.c-btn-group__item {
+  margin: $spacing-small;
+}

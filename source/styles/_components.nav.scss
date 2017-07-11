@@ -1,0 +1,109 @@
+.c-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  background-color: transparent;
+  height: $nav-height-mobile;
+  border-bottom: 1px solid transparent;
+  transition: box-shadow $animation-time $animation-curve, border-color $animation-time $animation-curve;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    box-shadow: 0 1px 0 rgba($black, 0.1);
+    transition: transform $animation-time $animation-curve, box-shadow $animation-time $animation-curve;
+  }
+
+  &.is-transparent {
+    box-shadow: none;
+    border-bottom: 1px solid rgba($white, 0.2);
+
+    &:after {
+      transform: translateY(-100%);
+    }
+  }
+
+  @include mq(medium-up) {
+    height: $nav-height-desktop;
+  }
+}
+
+.c-nav__container {
+  height: 100%;
+  position: relative;
+  z-index: 10; // Position above back
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-nav__logo {
+  display: block;
+}
+
+.c-nav__toggle {
+  position: relative;
+  margin: -$spacing-medium;
+  padding: $spacing-medium;
+}
+
+.c-nav__list {
+  margin: 0 #{-$spacing-medium};
+}
+
+.c-nav__item {
+  display: inline-block;
+  margin: 0 $spacing-medium;
+}
+
+.c-nav__link {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $font-weight-bold;
+  height: $nav-height-mobile;
+  line-height: $nav-height-mobile;
+  color: $grey;
+  transition: color $animation-time $animation-curve;
+
+  @include mq(medium-up) {
+    height: $nav-height-desktop;
+    line-height: $nav-height-desktop;
+  }
+
+  &.is-active {
+    box-shadow: inset 0 -2px 0 0 $primary-color;
+  }
+
+  .c-nav.is-transparent & {
+    color: rgba($white, 0.8);
+
+    &:hover,
+    &.is-active {
+      color: $white;
+    }
+  }
+
+  &:hover,
+  &.is-active {
+    color: $grey-dark;
+  }
+}
+
+.c-nav__hamburger {
+  fill: $grey-dark;
+  transition: fill $animation-time $animation-curve;
+
+  .c-nav.is-transparent & {
+    fill: $white;
+  }
+}

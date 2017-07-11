@@ -1,0 +1,31 @@
+.c-logo {
+  width: 104px;
+  height: auto;
+  vertical-align: top;
+  transition: fill $animation-time $animation-curve;
+
+  @include mq(medium-up) {
+    width: 124px;
+  }
+
+  @include mq(large-up) {
+    width: 130px;
+  }
+}
+
+.c-logo__mark {
+  fill: $primary-color;
+}
+
+.c-logo__type {
+  fill: $grey-dark;
+  transition: fill $animation-time $animation-curve;
+
+  .c-nav.is-transparent & {
+    fill: $white;
+  }
+}
+
+.c-logo__shading {
+  fill: rgba($black, 0.08);
+}

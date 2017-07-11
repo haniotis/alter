@@ -1,0 +1,84 @@
+.c-mission-row {
+  display: flex;
+
+  @include mq(medium-down) {
+    flex-direction: column;
+  }
+
+  @include mq(medium-up) {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.c-mission-row__figure-wrap,
+.c-mission-row__content {
+  @include mq(medium-up) {
+    width: 50%;
+  }
+}
+
+.c-mission-row__figure-wrap {
+  position: relative;
+  height: 150px;
+
+  @include mq(small-up) {
+    height: 220px;
+  }
+
+  @include mq(medium-up) {
+    height: 500px;
+  }
+
+  @include mq(large-up) {
+    height: 600px;
+  }
+}
+
+.c-mission-row__figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $grey;
+}
+
+.c-mission-row__content {
+  background-color: $off-white;
+  display: flex;
+  align-items: center;
+  padding: $spacing-large;
+
+  @include mq(small-up) {
+    padding: 3rem $spacing-x-large;
+  }
+
+  @include mq(medium-up) {
+    padding: 60px;
+  }
+
+  @include mq(large-up) {
+    padding: 100px;
+  }
+}
+
+.c-mission-row__inner {
+  max-width: 540px;
+
+  @include mq(medium-up) {
+    .c-mission-row:nth-child(even) & {
+      margin-left: auto;
+    }
+  }
+}
+
+.c-mission-row__icon {
+  margin-bottom: $spacing-medium;
+  fill: $secondary-color;
+
+  @include mq(medium-up) {
+    margin-bottom: $spacing-large;
+  }
+}

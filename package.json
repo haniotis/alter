@@ -1,0 +1,29 @@
+{
+  "name": "alter",
+  "version": "1.0.0",
+  "description": "Alter marketing website, built on [Middleman](http://middlemanapp.com).",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "author": "Alexander Haniotis <alexander.haniotis@gmail.com> (http://volume7.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.18.0",
+    "clean-webpack-plugin": "^0.1.13",
+    "cors": "^2.8.1",
+    "jquery": "^3.1.1",
+    "packery": "^2.1.1",
+    "smooth-scroll": "cferdinandi/smooth-scroll",
+    "typed.js": "^2.0.2",
+    "webpack": "^1.13.3",
+    "webpack-bundle-analyzer": "^1.5.3"
+  }
+}

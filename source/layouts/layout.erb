@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Alter" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="https://alter.global/" />
+    <meta property="og:image" content="#" />
+    <meta property="og:description" content="#" />
+
+    <%= favicon_tag '/favicon.png' %>
+    <%= stylesheet_link_tag "main" %>
+  </head>
+  <body class="c-page js-page">
+
+    <%= partial "partials/nav" %>
+    <%= partial "partials/mobile_nav" %>
+
+    <%= yield %>
+
+    <%= partial "partials/footer" %>
+
+    <%= javascript_include_tag 'vendor' %>
+    <%= javascript_include_tag 'main' %>
+
+    <% if current_page.data.transparent_nav %>
+      <%= javascript_include_tag 'nav' %>
+    <% end %>
+    
+    <%= yield_content :page_scripts %>
+    <%= partial "partials/ga" %>
+  </body>
+</html>

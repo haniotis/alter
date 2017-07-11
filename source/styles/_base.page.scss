@@ -1,0 +1,9 @@
+// Page
+
+body {
+  position: relative;
+
+  &.is-clipped {
+    overflow: hidden;
+  }
+}

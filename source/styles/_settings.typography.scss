@@ -1,0 +1,64 @@
+// Misc
+
+$font-family: "Sofia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$base-line-height: 1.5;
+$heading-line-height: 1.25;
+$heading-line-height-tight: 1.15;
+
+$base-letter-spacing: -0.1px;
+
+$headline-color: $grey-dark;
+$body-color: $grey;
+
+
+// Font sizes
+
+$regular-font-size: (
+  null: 15px,
+  $medium: 16px,
+  $large: 17px,
+);
+
+$small-font-size: (
+  null: 0.85em
+);
+
+$h1-font-size: (
+  null: 2.25em,
+  $small: 2.6em,
+  $medium: 3em,
+  $large: 3.4em,
+  $x-large: 4em
+);
+
+$h2-font-size: (
+  null: 1.6em,
+  $medium: 1.7em,
+  $large: 1.9em,
+  $x-large: 2.4em
+);
+
+$h3-font-size: (
+  null: 1.2em,
+  $large: 1.4em,
+  $x-large: 1.6em
+);
+
+$h4-font-size: (
+  null: 1em,
+  $medium: 1.1em,
+  $large: 1.2em
+);
+
+$h5-font-size: (
+  null: 1em,
+  $large: 1.1em
+);
+
+$h6-font-size: (
+  null: 0.8em
+);

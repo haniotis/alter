@@ -1,0 +1,87 @@
+.c-field {
+  display: block;
+}
+
+.c-field__input-wrapper {
+  position: relative;
+}
+
+.c-field__label {
+  display: block;
+  color: $grey-light;
+  @include font-size($small-font-size);
+
+  .c-field--dark & {
+
+  }
+}
+
+.c-field__input {
+  width: 100%;
+  padding: 0 $spacing-large;
+  height: $button-height-mobile;
+  line-height: $button-height-mobile;
+  outline: 0;
+  font-weight: $font-weight-regular;
+  color: $grey-dark;
+  border: 0;
+  transition: background-color $animation-time $animation-curve, color $animation-time $animation-curve;
+  resize: none;
+
+  &::placeholder {
+    color: $grey-light;
+
+    .c-field--dark & {
+      color: rgba($white, 0.5);
+    }
+  }
+
+  .c-field--dark & {
+    color: $white;
+    background-color: rgba($black, 0.15);
+
+    &:focus {
+      background-color: rgba($black, 0.2);
+    }
+  }
+
+  @include mq(medium-up) {
+    padding: 0 1.5rem;
+    height: $button-height-desktop;
+    line-height: $button-height-desktop;
+  }
+}
+
+.c-field__input--textarea {
+  resize: vertical;
+}
+
+.c-field__input--has-right-add-on {
+  padding-right: 4rem;
+}
+
+.c-field__add-on {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--right {
+    right: $spacing-large;
+  }
+}
+
+
+// Inline
+
+.c-inline-form {
+  display: flex;
+}
+
+.c-inline-form__field {
+  flex: 1;
+}
+
+.c-inline-form__btn {
+  margin-left: $spacing-medium;
+  flex-shrink: 0;
+}

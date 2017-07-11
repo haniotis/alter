@@ -1,0 +1,69 @@
+.c-footer {
+  background-color: $grey-dark;
+}
+
+.c-footer__main {
+  @include vertical-padding(3rem);
+
+  @include mq(small-up) {
+    @include vertical-padding(4rem);
+  }
+
+  @include mq(medium-up) {
+    @include vertical-padding(5rem);
+  }
+
+  @include mq(large-up) {
+    @include vertical-padding(6rem);
+  }
+
+  @include mq(x-large-up) {
+    @include vertical-padding(7rem);
+  }
+}
+
+.c-footer__link {
+  display: flex;
+  align-items: center;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  color: $grey-light;
+  transition: color $animation-time $animation-curve;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include mq(medium-up) {
+    height: 3rem;
+    line-height: 3rem;
+  }
+}
+
+.c-footer__icon {
+  margin-right: $spacing-medium;
+  transition: fill $animation-time $animation-curve;
+}
+
+.c-footer__secondary {
+  text-align: center;
+  border-top: 1px solid rgba($white, 0.10);
+  @include vertical-padding(1.5rem);
+
+  @include mq(medium-up) {
+    @include vertical-padding(1.75rem);
+  }
+}
+
+.c-footer__copyright {
+  color: $grey-light;
+}
+
+.c-footer__logo {
+  width: 130px;
+  height: 36px;
+
+  * {
+    fill: $grey-light !important; // Overwrite color set in logo file
+  }
+}

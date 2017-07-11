@@ -1,0 +1,122 @@
+// General
+
+.c-modal,
+.c-modal__container {
+  backface-visibility: hidden; // Fix iOS bug
+}
+
+// Modal
+
+.c-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  overflow: auto;
+  transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve;
+  background-color: rgba($black, 0.6);
+  pointer-events: none;
+  z-index: 600;
+
+  &.c-modal.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.c-modal__table {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.c-modal__cell {
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  padding: $spacing-medium;
+
+  @include mq(small) {
+    padding: $spacing-large;
+  }
+
+  @include mq(medium) {
+    padding: $spacing-x-large;
+  }
+
+  @include mq(large) {
+    padding: $spacing-xxx-large;
+  }
+}
+
+// modal container
+
+.c-modal__container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  background: $white;
+  border-radius: $border-radius;
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: transform $animation-time $animation-curve, opacity $animation-time $animation-curve;
+  z-index: 450;
+
+  &--wide {
+    max-width: 720px;
+  }
+
+  .is-visible & {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.c-modal__header,
+.c-modal__main {
+  padding: $spacing-medium;
+
+  @include mq(medium-up) {
+    padding: $spacing-large;
+  }
+}
+
+.c-modal__header {
+  text-align: left;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  justify-content: space-between;
+
+  @include mq(medium-up) {
+    height: 76px;
+  }
+}
+
+.c-modal__title {
+  margin: 0 $spacing-small 0 0;
+  line-height: $heading-line-height;
+}
+
+
+// Modal close
+
+.c-modal__close {
+  opacity: 0.7;
+  transition: opacity $animation-time $animation-curve;
+
+  &:hover {
+    opacity: 1;
+  }
+}
