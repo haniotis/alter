@@ -1,3 +1,19 @@
+<div class="c-newsletter">
+  <div class="o-container c-newsletter__container">
+    <h3 class="c-newsletter__heading">Stay up to date with news and announcements</h3>
+    <form action="#" class="c-newsletter__form">
+      <div class="c-field">
+        <div class="c-field__input-wrapper">
+          <input type="email" class="c-field__input" placeholder="Your email address">
+        </div>
+      </div>
+      <button class="c-btn c-btn--primary c-newsletter__btn">
+        <%= inline_svg("/icons/right-arrow.svg", class: "o-icon o-icon--white") %>
+      </button>
+    </form>
+  </div>
+</div>
+
 <div class="c-footer">
   <div class="c-footer__main">
     <div class="o-container">
@@ -16,7 +32,7 @@
               <a href="/ventures/" class="c-footer__link">Our Ventures</a>
             </li>
             <li class="c-footer__item">
-              <a href="#" class="c-footer__link">Blog</a>
+              <a href="https://medium.com/alterglobal" class="c-footer__link">Blog</a>
             </li>
           </ul>
         </div>
@@ -39,12 +55,6 @@
               <a href="https://www.linkedin.com/company-beta/15077937/" class="c-footer__link">
                 <%= inline_svg("icons/linkedin.svg", class: "o-icon c-footer__icon") %>
                 <span>LinkedIn</span>
-              </a>
-            </li>
-            <li class="c-footer__item">
-              <a href="#" class="c-footer__link">
-                <%= inline_svg("icons/medium.svg", class: "o-icon c-footer__icon") %>
-                <span>Medium</span>
               </a>
             </li>
           </ul>

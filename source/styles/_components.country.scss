@@ -1,0 +1,65 @@
+.c-country {
+  position: relative;
+}
+
+.c-country__map-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  margin-bottom: $spacing-medium;
+
+  @include mq(small-up) {
+    height: 200px;
+  }
+
+  @include mq(medium-up) {
+    height: 260px;
+  }
+
+  @include mq(large-up) {
+    height: 280px;
+  }
+}
+
+.c-country__map {
+  fill: lighten($secondary-color, 25%);
+  max-height: 100%;
+}
+
+.c-country__name {
+  color: $white;
+  margin-bottom: 0;
+
+  @include mq(medium-up) {
+    margin-bottom: $spacing-small;
+  }
+}
+
+.c-country__meta {
+  color: rgba($white, 0.7);
+}
+
+.c-country__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  color: $white;
+  padding: $spacing-large;
+  text-align: left;
+  background-color: mix($secondary-color, $black, 85%);
+  transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve;
+
+  small {
+    display: block; // Make sure proper line-height is applied
+  }
+
+  .c-country:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+}

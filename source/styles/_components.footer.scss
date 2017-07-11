@@ -1,5 +1,11 @@
 .c-footer {
   background-color: $grey-dark;
+
+  @include mq(large-up) {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+  }
 }
 
 .c-footer__main {
@@ -48,6 +54,7 @@
 .c-footer__secondary {
   text-align: center;
   border-top: 1px solid rgba($white, 0.10);
+  margin-top: auto; // Align to bottom
   @include vertical-padding(1.5rem);
 
   @include mq(medium-up) {
@@ -63,7 +70,8 @@
   width: 130px;
   height: 36px;
 
-  * {
+  .c-logo__type,
+  .c-logo__mark {
     fill: $grey-light !important; // Overwrite color set in logo file
   }
 }

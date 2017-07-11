@@ -1,5 +1,6 @@
 .c-field {
   display: block;
+  width: 100%;
 }
 
 .c-field__input-wrapper {
@@ -18,35 +19,27 @@
 
 .c-field__input {
   width: 100%;
-  padding: 0 $spacing-large;
+  padding: 0 $spacing-medium;
   height: $button-height-mobile;
   line-height: $button-height-mobile;
   outline: 0;
   font-weight: $font-weight-regular;
   color: $grey-dark;
   border: 0;
+  background-color: $white;
   transition: background-color $animation-time $animation-curve, color $animation-time $animation-curve;
   resize: none;
 
   &::placeholder {
     color: $grey-light;
-
-    .c-field--dark & {
-      color: rgba($white, 0.5);
-    }
   }
 
-  .c-field--dark & {
-    color: $white;
-    background-color: rgba($black, 0.15);
-
-    &:focus {
-      background-color: rgba($black, 0.2);
-    }
+  &:focus {
+    box-shadow: 0 0 0 1px $primary-color, inset 0 0 0 1px $primary-color;
   }
 
   @include mq(medium-up) {
-    padding: 0 1.5rem;
+    padding: 0 $spacing-large;
     height: $button-height-desktop;
     line-height: $button-height-desktop;
   }

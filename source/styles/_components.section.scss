@@ -37,7 +37,7 @@
 }
 
 .c-section--accent {
-  background-color: $primary-color;
+  background-color: $secondary-color;
 }
 
 
@@ -75,11 +75,11 @@
   }
 
   @include mq(medium-up) {
-    @include vertical-padding(5rem);
+    @include vertical-padding(4rem);
   }
 
   @include mq(large-up) {
-    @include vertical-padding(6rem);
+    @include vertical-padding(4.5rem);
   }
 
   & + &:not(.c-section__block--maintain-padding):not(.c-section__block--border) {
@@ -102,41 +102,6 @@
 
 // Heading
 
-.c-section__heading {
-  margin-bottom: $spacing-x-large;
-
-  @include mq(small-up) {
-    margin-bottom: $spacing-xxx-large;
-  }
-
-  @include mq(medium-up) {
-    margin-bottom: $spacing-x-large * 2;
-  }
-
-  @include mq(large-up) {
-    margin-bottom: $spacing-x-large * 2.5;
-  }
-}
-
 .c-section__heading--lowlight * {
   color: $white;
-}
-
-
-// Footer
-
-.c-section__footer {
-  margin-top: $spacing-x-large;
-
-  @include mq(small-up) {
-    margin-top: $spacing-xxx-large;
-  }
-
-  @include mq(medium-up) {
-    margin-top: $spacing-x-large * 2;
-  }
-
-  @include mq(large-up) {
-    margin-top: $spacing-x-large * 2.5;
-  }
 }
