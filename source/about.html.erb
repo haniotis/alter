@@ -2,13 +2,16 @@
 mission:
   - heading: Find the best entrepreneurs in frontier markets
     subheading: Every nation has a few game-changing entrepreneurs that create outsized value. We select the highest character, highest competency management teams leading the most scalable ventures.
-    icon: hamburger
+    icon: trophy
+    photo: best-entrepreneurs.jpg
   - heading: Connect them to Silicon Valley Resources
     subheading: Even the best entrepreneurs in frontier markets lack access to the resources they need to scale. We match them with talent, networks, expertise, and investments from the world’s most prolific entrepreneurial ecosystem - Silicon Valley.
-    icon: hamburger
+    icon: bridge
+    photo: silicon-valley.jpg
   - heading: Create impact at scale
     subheading: Our ventures scale-up to create thousands of new jobs and deliver essential products and services to millions of people. Our entrepreneurs become role-models that lead the transformation of their own national ecosystems.
-    icon: hamburger
+    icon: network
+    photo: impact.jpg
 
 where_we_work:
   heading: Where we work
@@ -61,7 +64,6 @@ team:
       <h1>build with the best.</h1>
       <h1>transform communities.</h1>
     </div>
-    <h3 class="c-about-header__subheading">Vestibulum id ligula porta felis euismod semper.</h3>
   </div>
 </div>
 
@@ -70,7 +72,7 @@ team:
   <% current_page.data.mission.each do |item| %>
     <div class="c-mission-row">
       <div class="c-mission-row__figure-wrap">
-        <div class="c-mission-row__figure u-cover"></div>
+        <div class="c-mission-row__figure u-cover" style="background-image: url('/images/about/mission/<%= item.photo %>');"></div>
       </div>
       <div class="c-mission-row__content">
         <div class="c-mission-row__inner">
@@ -95,16 +97,14 @@ team:
       <div class="o-grid">
         <% current_page.data.where_we_work.countries.each do |country| %>
           <div class="o-grid__item u-1/1 u-1/2@sm u-1/4@lg">
-            <div class="c-country">
-              <div class="c-country__map-wrap">
-                <%= inline_svg("/about/countries/#{country.name}.svg", class: "c-country__map") %>
-              </div>
+            <a href="/ventures/#<%= country.name %>" class="c-country">
+              <%= inline_svg("/about/countries/#{country.name}.svg", class: "c-country__map") %>
               <h3 class="c-country__name"><%= country.pretty_name %></h3>
               <p class="c-country__meta"><%= country.meta %></p>
               <div class="c-country__description u-hide--medium-down">
                 <small><%= country.description %></small>
               </div>
-            </div>
+            </a>
           </div>
         <% end %>
       </div>

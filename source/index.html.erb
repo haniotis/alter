@@ -1,5 +1,13 @@
 ---
 transparent_nav: true
+
+stats:
+  - digit: 4
+    label: countries in transition
+  - digit: 12
+    label: ventures leading the way
+  - digit: $1.1M
+    label: value added by Alter
 ---
 
 <div class="c-hero">
@@ -16,8 +24,14 @@ transparent_nav: true
   <%= partial('partials/down_arrow', :locals => { :link => "#about" }) %>
 </div>
 
-<div class="c-section" id="about">
-  <div class="o-container">
-    
+<section class="c-home-main" id="about">
+  <div class="c-home-main__video-wrap"></div>
+  <div class="c-home-main__content">
+    <% current_page.data.stats.each do |stat| %>
+      <div class="c-home-main__item">
+        <h3 class="h1 c-home-main__digit"><%= stat.digit %></h3>
+        <p><%= stat.label %></p>
+      </div>
+    <% end %>
   </div>
-</div>
+</section>

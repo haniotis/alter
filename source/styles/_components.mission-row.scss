@@ -6,7 +6,7 @@
   }
 
   @include mq(medium-up) {
-    &:nth-child(even) {
+    &:nth-child(odd) {
       flex-direction: row-reverse;
     }
   }
@@ -21,7 +21,7 @@
 
 .c-mission-row__figure-wrap {
   position: relative;
-  height: 150px;
+  height: 200px;
 
   @include mq(small-up) {
     height: 220px;
@@ -46,17 +46,17 @@
 }
 
 .c-mission-row__content {
-  background-color: $off-white;
   display: flex;
   align-items: center;
   padding: $spacing-large;
 
   @include mq(small-up) {
-    padding: 3rem $spacing-x-large;
+    padding: 3rem $spacing-xx-large;
   }
 
   @include mq(medium-up) {
     padding: 60px;
+    background-color: $off-white;
   }
 
   @include mq(large-up) {
@@ -65,10 +65,10 @@
 }
 
 .c-mission-row__inner {
-  max-width: 540px;
+  max-width: 465px;
 
   @include mq(medium-up) {
-    .c-mission-row:nth-child(even) & {
+    .c-mission-row:nth-child(odd) & {
       margin-left: auto;
     }
   }
