@@ -1,8 +1,23 @@
+---
+header:
+  sections:
+    - name: Lead
+      photo: lead
+    - name: Scale
+      photo: scale
+    - name: Transform
+      photo: transform
+---
+
 <div class="c-ventures-header">
   <div class="c-ventures-header__inner">
-    <h1 class="c-ventures-header__title">Lead</h1>
-    <h1 class="c-ventures-header__title">Scale</h1>
-    <h1 class="c-ventures-header__title">Transform</h1>
+    <% current_page.data.header.sections.each do |section| %>
+      <div class="c-ventures-header__slice">
+        <h1 class="c-ventures-header__title"><%= section.name %></h1>
+        <div class="c-ventures-header__image" style="background-image: url('/images/ventures/header/<%= section.photo %>.jpg');"></div>
+      </div>
+    <% end %>
   </div>
+
   <%= partial('partials/down_arrow', :locals => { :link => "#about" }) %>
 </div>

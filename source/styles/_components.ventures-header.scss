@@ -1,3 +1,5 @@
+$skew-angle: 22deg;
+
 .c-ventures-header {
   position: relative;
   width: 100%;
@@ -15,25 +17,99 @@
   position: relative;
   width: 100%;
   height: 100%;
+
+  @include mq(medium-up) {
+    width: 130%;
+    margin-left: -15%;
+    display: flex;
+  }
+
+  @include mq(large-up) {
+    width: 124%;
+    margin-left: -12%;
+  }
+
+  @include mq(x-large-up) {
+    width: 118%;
+    margin-left: -9%;
+  }
+}
+
+.c-ventures-header__slice {
+  position: relative;
+  width: 100%;
+  height: percentage(1/3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @include mq(medium-up) {
+    width: 35%;
+    margin-left: -1%;
+    height: 100%;
+    transform: skewX(-$skew-angle);
+  }
 }
 
 .c-ventures-header__title {
-  position: absolute;
-  margin: 0;
+  position: relative;
+  color: $white;
+  z-index: 10; // Position above image
+  text-shadow: 0 1px 2px rgba($black, 0.25);
 
-  &:nth-child(1) {
-    left: 10%;
-    top: 15%;
+  @include mq(medium-up) {
+    position: absolute;
+    margin: 0;
+    transform: skewX($skew-angle);
+
+    .c-ventures-header__slice:nth-child(1) & {
+      left: 20%;
+      top: 15%;
+    }
+
+    .c-ventures-header__slice:nth-child(2) & {
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0) skewX($skew-angle);
+    }
+
+    .c-ventures-header__slice:nth-child(3) & {
+      right: 20%;
+      bottom: 15%;
+    }
   }
 
-  &:nth-child(2) {
+  @include mq(large-up) {
+
+    .c-ventures-header__slice:nth-child(1) & {
+      left: 18%;
+      top: 12%;
+    }
+
+    .c-ventures-header__slice:nth-child(3) & {
+      right: 18%;
+      bottom: 12%;
+    }
+
+  }
+}
+
+.c-ventures-header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 25%;
+  background-size: cover;
+
+  @include mq(medium-up) {
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-
-  &:nth-child(3) {
-    right: 10%;
-    bottom: 15%;
+    width: 175%;
+    height: 135%;
+    background-position: 50% 0%; // Top align images
+    transform: translate3d(-50%, -50%, 0) skewX($skew-angle);
   }
 }

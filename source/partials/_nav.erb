@@ -1,17 +1,15 @@
 <nav class="c-nav js-nav<% if current_page.data.transparent_nav %> c-nav--transparent<% end %>">
-  <div class="o-container c-nav__container">
-    <a href="/" class="c-nav__logo">
-      <%= inline_svg("/logo.svg", class: "c-logo") %>
-    </a>
-    <ul class="o-list o-list--bare c-nav__list u-hide--medium-down">
-      <% data.menuElements.main_menu.each do |menuElement| %>
-        <li class="c-nav__item">
-          <a class="c-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1].gsub('/', '') ? ' is-active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
-        </li>
-      <% end %>
-    </ul>
-    <button class="c-nav__toggle u-hide--medium-up js-toggle-nav">
-      <%= inline_svg("/icons/hamburger.svg", class: "c-nav__hamburger o-icon") %>
-    </button>
-  </div>
+  <a href="/" class="c-nav__logo">
+    <%= inline_svg("/logo.svg", class: "c-logo") %>
+  </a>
+  <ul class="o-list o-list--bare c-nav__list u-hide--medium-down">
+    <% data.menuElements.main_menu.each do |menuElement| %>
+      <li class="c-nav__item">
+        <a class="c-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1].gsub('/', '') ? ' is-active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
+      </li>
+    <% end %>
+  </ul>
+  <button class="c-nav__toggle u-hide--medium-up js-toggle-nav">
+    <%= inline_svg("/icons/hamburger.svg", class: "c-nav__hamburger o-icon") %>
+  </button>
 </nav>

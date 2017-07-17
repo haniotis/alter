@@ -1,10 +1,15 @@
 .c-nav {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 300;
   background-color: $white;
+  padding-left: $spacing-large;
+  padding-right: $spacing-large;
   box-shadow: 0 1px 2px 0 rgba($black, 0.13);
   height: $nav-height-mobile;
   transition: background-color $animation-time $animation-curve, box-shadow $animation-time $animation-curve;
@@ -16,21 +21,14 @@
 
   @include mq(medium-up) {
     height: $nav-height-desktop;
+    padding-left: $spacing-x-large;
+    padding-right: $spacing-x-large;
   }
 }
 
 .c-nav--transparent {
   background-color: transparent;
   box-shadow: 0 1px 0 0 rgba($white, 0.2);
-}
-
-.c-nav__container {
-  height: 100%;
-  position: relative;
-  z-index: 10; // Position above back
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .c-nav__logo {
