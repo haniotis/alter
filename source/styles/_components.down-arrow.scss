@@ -48,7 +48,6 @@ $down-arrow-width: 64px;
 .c-down-arrow__icon {
   fill: $grey-dark;
   animation: bounce 1.6s infinite;
-  margin-top: 1px;
 
   .c-down-arrow--contrast & {
     fill: $white;

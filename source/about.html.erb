@@ -1,4 +1,6 @@
 ---
+dark_arrow: true
+
 mission:
   - heading: Find the best entrepreneurs in frontier markets
     subheading: Every nation has a few game-changing entrepreneurs that create outsized value. We select the highest character, highest competency management teams leading the most scalable ventures.
@@ -81,9 +83,10 @@ team:
       <h1>transform communities.</h1>
     </div>
   </div>
+  <%= partial('partials/down_arrow', :locals => { :link => "#mission" }) %>
 </div>
 
-<div>
+<div id="mission">
   <% current_page.data.mission.each do |item| %>
     <div class="c-mission-row">
       <div class="c-mission-row__figure-wrap">

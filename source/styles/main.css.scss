@@ -39,7 +39,6 @@
 
 // Components
 
-@import "components.about-header";
 @import "components.advisor-list";
 @import "components.button";
 @import "components.country";
@@ -61,8 +60,10 @@
 
 // Pages
 
+@import "pages.about";
 @import "pages.home";
 @import "pages.ventures";
+@import "pages.venture";
 
 
 // Utilities

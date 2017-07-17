@@ -1,0 +1,91 @@
+.c-venture-section {
+  position: relative;
+  padding-top: $nav-height-mobile;
+
+  @include mq(medium-up) {
+    padding-top: $nav-height-desktop;
+  }
+}
+
+.c-venture-section__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+// Main content
+
+.c-venture-section__content {
+  padding: $spacing-large;
+
+  @include mq(small-up) {
+    padding: 2.5rem $spacing-large;
+  }
+
+  @include mq(medium-up) {
+    padding: 4rem 3rem;
+    width: percentage(2/3);
+  }
+
+  @include mq(large-up) {
+    width: 60%;
+    padding: 4rem;
+  }
+
+  @include mq(x-large-up) {
+    width: 57%;
+    padding: 6rem;
+  }
+}
+
+
+// Testimonial + quote
+
+.c-venture-section__testimonial {
+  height: 400px;
+  width: 100%;
+  background-color: $grey;
+
+  @include mq(medium-up) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: percentage(1/3);
+    height: 100%;
+  }
+
+  @include mq(large-up) {
+    width: 40%;
+  }
+
+  @include mq(x-large-up) {
+    width: 43%;
+  }
+}
+
+.c-venture-section__quote {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($secondary-color, 0.95);
+  padding: $spacing-large;
+
+  @include mq(large-up) {
+    bottom: $spacing-large;
+    left: $spacing-large;
+    right: $spacing-large;
+  }
+
+  @include mq(x-large-up) {
+    bottom: $spacing-xx-large;
+    left: $spacing-xx-large;
+    right: $spacing-xx-large;
+    padding: $spacing-xx-large;
+  }
+}
+
+.c-venture-section__author {
+  color: rgba($white, 0.75);
+}
