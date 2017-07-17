@@ -25,7 +25,11 @@ stats:
 </div>
 
 <section class="c-home-main" id="about">
-  <div class="c-home-main__video-wrap"></div>
+  <div class="c-home-main__video-wrap">
+    <button class="c-home-main__play">
+      <%= inline_svg("/icons/play-video.svg", class: "c-home-main__play-icon o-icon o-icon--white") %>
+    </button>
+  </div>
   <div class="c-home-main__content">
     <% current_page.data.stats.each do |stat| %>
       <div class="c-home-main__item">

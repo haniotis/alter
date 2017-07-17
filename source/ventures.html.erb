@@ -7,6 +7,28 @@ header:
       photo: scale
     - name: Transform
       photo: transform
+
+countries:
+  - name: Myanmar
+    subheading: Leapfrogging Tech Innovation
+    ventures:
+      - name: company
+        founder: alex
+        description: Nullam id dolor id nibh ultricies vehicula ut id elit.
+      - name: company
+        founder: alex
+        description: Nullam id dolor id nibh ultricies vehicula ut id elit.
+  - name: Afghanistan
+    subheading: Leapfrogging Tech Innovation
+    ventures:
+      - name: company
+        founder: alex
+        description: Nullam id dolor id nibh ultricies vehicula ut id elit.
+      - name: company
+        founder: alex
+        description: Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+
 ---
 
 <div class="c-ventures-header">
@@ -19,5 +41,33 @@ header:
     <% end %>
   </div>
 
-  <%= partial('partials/down_arrow', :locals => { :link => "#about" }) %>
+  <%= partial('partials/down_arrow', :locals => { :link => "#myanmar" }) %>
 </div>
+
+<% current_page.data.countries.each do |country| %>
+
+  <div class="c-section c-country-section" id="<%= country.name.downcase %>">
+    <div class="o-container">
+      <div class="c-section__block">
+        <div class="c-section-heading u-text-center">
+          <h2 class="c-section-heading__heading"><%= country.name %></h2>
+          <p class="u-text-lead"><%= country.subheading %></p>
+        </div>
+      </div>
+      <div class="c-section__block">
+        <div class="o-grid">
+          <% country.ventures.each do |venture| %>
+            <div class="o-grid__item u-1/1 u-1/2@sm u-1/4@md">
+              <div class="c-venture">
+                <p class="c-venture__text"><%= venture.description %></p>
+                <img src="/images/ventures/<%= country.name.downcase %>/<%= venture.name %>.png" class="c-venture__logo">
+                <div class="c-venture__photo u-cover" style="background-image: url('/images/ventures/<%= country.name.downcase %>/<%= venture.name %>.jpg');"></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

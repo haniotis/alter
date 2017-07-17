@@ -1,0 +1,30 @@
+.c-venture {
+  position: relative;
+  padding-bottom: 100%;
+  background-color: $black;
+}
+
+.c-venture__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: $spacing-large;
+  color: $white;
+  background-color: rgba($black, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve; 
+  z-index: 10; // Position above photo
+
+  .c-venture:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.c-venture__photo {
+  opacity: 0.5;
+  @include cover;
+}
