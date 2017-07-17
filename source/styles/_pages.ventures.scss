@@ -117,8 +117,41 @@ $skew-angle: 22deg;
 }
 
 
-// Country section
+// Venture title
 
-.c-country-section:nth-child(odd) {
-  background-color: $off-white;
+.c-venture-title {
+  position: relative;
+  border: 1px solid $border-color;
+  padding: $spacing-large;
+
+  @include mq(small-up) {
+    padding-bottom: 100%;
+  }
+}
+
+.c-venture-title__content {
+  @include mq(small-up) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $spacing-large;
+  }
+
+  @include mq(large-up) {
+    padding: $spacing-xx-large;
+  }
+}
+
+.c-venture-title__name {
+  margin-bottom: $spacing-small;
+}
+
+.c-venture-title__flag {
+  height: 28px;
+  margin-bottom: $spacing-small * 1.5;
+
+  @include mq(medium-up) {
+    margin-bottom: $spacing-medium;
+  }
 }

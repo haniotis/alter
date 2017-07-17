@@ -18,6 +18,10 @@
   transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve; 
   z-index: 10; // Position above photo
 
+  @include mq(large-up) {
+    padding: $spacing-x-large;
+  }
+
   .c-venture:hover & {
     opacity: 1;
     visibility: visible;
