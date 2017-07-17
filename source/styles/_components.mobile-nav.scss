@@ -1,17 +1,28 @@
 .c-mobile-nav {
   position: fixed;
   overflow: auto;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: $grey-dark;
+  top: $spacing-small * 1.5;
+  left: $spacing-small * 1.5;
+  right: $spacing-small * 1.5;
+  background: $white;
+  transform: scale(0.96);
+  transform-origin: top right;
+  border: 1px solid $border-color;
+  padding: $spacing-x-large;
+  box-shadow: 0 2px 4px 0 rgba($black, 0.15);
   z-index: 300;
-  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
   transition: transform $animation-time $animation-curve, opacity $animation-time $animation-curve, visibility $animation-time $animation-curve;
 
   &.is-open {
+    opacity: 1;
+    visibility: visible;
     transform: none;
+  }
+
+  @include mq(small-up) {
+    padding: $spacing-xx-large;
   }
 
   @include mq(medium-up) {
@@ -19,27 +30,7 @@
   }
 }
 
-.c-mobile-nav__inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 6rem 0;
-  transform: translateY($spacing-large);
-  opacity: 0;
-  transition: transform $animation-time $animation-curve, opacity $animation-time $animation-curve;
-
-  .c-mobile-nav.is-open & {
-    transform: none;
-    opacity: 1;
-  }
-
-  @include mq(small-up) {
-    padding: 8rem 0;
-  }
-}
-
 .c-mobile-nav__list {
-  text-align: center;
   width: 100%;
   margin: 0 0 $spacing-medium 0;
   padding: 0;
@@ -47,29 +38,23 @@
 }
 
 .c-mobile-nav__link {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  color: $white;
+  color: $grey-dark;
   padding: $spacing-small/2 0;
   @include font-size($h2-font-size);
 }
 
-.c-mobile-nav__header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: $nav-height-mobile;
-}
-
-.c-mobile-nav__container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .c-mobile-nav__close {
-  align-self: flex-end;
+  position: absolute;
+  top: $spacing-medium;
+  right: $spacing-medium;
+}
+
+.c-mobile-nav__icon {
+  margin-right: $spacing-small * 1.5;
+  fill: $primary-color;
+  position: relative;
+  top: -2px; // Align with label
 }

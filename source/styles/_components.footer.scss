@@ -36,7 +36,8 @@
   color: $grey-light;
   transition: color $animation-time $animation-curve;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
   }
 

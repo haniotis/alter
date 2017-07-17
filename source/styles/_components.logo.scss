@@ -21,8 +21,12 @@
   fill: $grey-dark;
   transition: fill $animation-time $animation-curve;
 
-  .c-nav.is-transparent & {
+  .c-nav--transparent & {
     fill: $white;
+  }
+
+  .c-nav.is-fixed & {
+    fill: $grey-dark;
   }
 }
 

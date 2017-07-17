@@ -57,7 +57,12 @@
 .c-advisor__photo {
   border-radius: 50%;
   margin-right: $spacing-medium;
-  @include square(52px);
+  box-shadow: inset 0 0 0 1px rgba($black, 0.1);
+  @include square(40px);
+
+  @include mq(medium-up) {
+    @include square(52px);
+  }
 }
 
 .c-advisor__name {

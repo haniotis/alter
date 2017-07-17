@@ -61,4 +61,9 @@
 
 .c-newsletter__btn {
   flex-shrink: 0;
+  margin-left: $spacing-small;
+
+  @include mq(small-up) {
+    margin-left: $spacing-medium;
+  }
 }

@@ -8,11 +8,6 @@
   max-width: $container-max-width;
   margin: 0 auto;
 
-  @include mq(small-up) {
-    padding-left: $spacing-xx-large;
-    padding-right: $spacing-xx-large;
-  }
-
   @include mq(medium-up) {
     padding-left: $spacing-x-large * 2;
     padding-right: $spacing-x-large * 2;

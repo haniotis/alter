@@ -21,14 +21,11 @@
 
     <%= yield %>
 
+    <%= partial "partials/newsletter" %>
     <%= partial "partials/footer" %>
 
     <%= javascript_include_tag 'vendor' %>
     <%= javascript_include_tag 'main' %>
-
-    <% if current_page.data.transparent_nav %>
-      <%= javascript_include_tag 'nav' %>
-    <% end %>
     
     <%= yield_content :page_scripts %>
     <%= partial "partials/ga" %>

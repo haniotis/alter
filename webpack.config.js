@@ -5,7 +5,6 @@ var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlug
 module.exports = {
   entry: {
     main: './source/scripts/main.js',
-    nav: './source/scripts/nav.js',
     home: './source/scripts/pages/home.js',
     about: './source/scripts/pages/about.js',
     vendor: [
