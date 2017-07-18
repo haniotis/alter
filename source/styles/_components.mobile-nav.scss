@@ -8,7 +8,7 @@
   transform: scale(0.96);
   transform-origin: top right;
   border: 1px solid $border-color;
-  padding: $spacing-x-large;
+  padding: $spacing-large $spacing-x-large;
   box-shadow: 0 2px 4px 0 rgba($black, 0.15);
   z-index: 300;
   opacity: 0;
@@ -44,6 +44,11 @@
   color: $grey-dark;
   padding: $spacing-small/2 0;
   @include font-size($h2-font-size);
+}
+
+.c-mobile-nav__link--secondary {
+  color: $grey;
+  @include font-size($h4-font-size);
 }
 
 .c-mobile-nav__close {

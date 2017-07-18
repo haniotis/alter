@@ -6,7 +6,15 @@
     <% data.menuElements.main_menu.each do |menuElement| %>
       <li class="c-mobile-nav__item">
         <a class="c-mobile-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1] ? ' is-active"' : '') %>" href="<%= menuElement.href %>">
-          <%= inline_svg("/icons/#{menuElement.icon}.svg", class: "c-mobile-nav__icon o-icon") %>
+          <%= menuElement.title %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <ul class="c-mobile-nav__list">
+    <% data.menuElements.social_links.each do |menuElement| %>
+      <li class="c-mobile-nav__item">
+        <a class="c-mobile-nav__link c-mobile-nav__link--secondary" href="<%= menuElement.href %>">
           <%= menuElement.title %>
         </a>
       </li>

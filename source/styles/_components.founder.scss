@@ -42,6 +42,7 @@
   }
 
   @include mq(x-large-up) {
+    margin-right: $spacing-xx-large;
     @include square(120px);
   }
 }

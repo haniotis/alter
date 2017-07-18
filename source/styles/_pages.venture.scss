@@ -18,6 +18,7 @@
 
 .c-venture-section__content {
   padding: $spacing-large;
+  display: flex;
 
   @include mq(small-up) {
     padding: 2.5rem $spacing-large;
@@ -39,20 +40,40 @@
   }
 }
 
+.c-venture-section__content-inner {
+  max-width: 900px; // Limit content width
+  margin-left: auto;
+}
+
+.c-venture-section__logo {
+  margin-bottom: $spacing-small;
+  max-height: 32px;
+
+  @include mq(medium-up) {
+    margin-bottom: $spacing-medium;
+    max-height: 40px;
+  }
+}
+
 
 // Testimonial + quote
 
 .c-venture-section__testimonial {
-  height: 400px;
+  height: 440px;
   width: 100%;
   background-color: $grey;
 
+  @include mq(small-up) {
+    height: 480px;
+  }
+
   @include mq(medium-up) {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: $nav-height-desktop;
     right: 0;
+    bottom: 0;
     width: percentage(1/3);
-    height: 100%;
+    height: auto;
   }
 
   @include mq(large-up) {
@@ -76,6 +97,7 @@
     bottom: $spacing-large;
     left: $spacing-large;
     right: $spacing-large;
+    max-width: 640px; // Limit width
   }
 
   @include mq(x-large-up) {

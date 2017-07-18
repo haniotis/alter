@@ -1,10 +1,15 @@
 main_menu:
 - title: About Us
   href: "/about/"
-  icon: info
 - title: Our Ventures
   href: "/ventures/"
-  icon: marker
 - title: Blog
   href: "https://medium.com/alterglobal"
-  icon: blog
+
+social_links:
+- title: Facebook
+  href: "https://www.facebook.com/VentureBoldly/"
+- title: Twitter
+  href: "https://twitter.com/Alter_Global"
+- title: LinkedIn
+  href: "https://www.linkedin.com/company-beta/15077937/"

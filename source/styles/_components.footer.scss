@@ -1,5 +1,7 @@
 .c-footer {
   background-color: $grey-dark;
+  position: relative;
+  z-index: 10; // Position above fixed sidebar
 
   @include mq(large-up) {
     display: flex;
