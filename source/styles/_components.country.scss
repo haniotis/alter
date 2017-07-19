@@ -2,6 +2,11 @@
   position: relative;
   width: 100%;
   display: block;
+
+  @include mq(medium-only) {
+    margin-left: $spacing-large;
+    margin-right: $spacing-large;
+  }
 }
 
 .c-country__map {
