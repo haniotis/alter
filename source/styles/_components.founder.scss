@@ -1,5 +1,6 @@
 .c-founder {
   display: flex;
+  width: 100%;
   margin-bottom: $spacing-x-large;
 
   @include mq(medium-up) {
