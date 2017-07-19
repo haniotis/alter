@@ -15,7 +15,6 @@ countries:
       - name: oway
         logo_width: 120
         description: Nay Aung, of Google and Stanford, runs the Expedia and the Uber of Myanmar with 1500 employees
-        featured: true
       - name: frontiir
         logo_width: 144
         description: Godfrey Tan, with a PhD from MIT, provides mesh wi-fi networks to crowded cities in the developing world
@@ -31,9 +30,10 @@ countries:
   - name: Haiti
     subheading: Liberation from Aid
     ventures:
-      - name: kreyol
+      - name: kreyol-essence
         logo_width: 126
-        description: Yve-Car runs a Haitian beauty products company that supports 1500 farmers 
+        description: Yve-Car runs a Haitian beauty products company that supports 1500 farmers
+        featured: true
       - name: solutions-it
         logo_width: 130
         description: Kurt runs Haiti’s top software development company bringing technology solutions to the island
@@ -64,15 +64,6 @@ countries:
       - name: ziba-foods
         logo_width: 102
         description: Raffi runs this sustainable food processing and exporting business, driving some of the country’s first truly modern agricultural infrastructure. 
-  - name: Cuba
-    subheading: Building Partnerships for Prosperity
-    ventures:
-      - name: company
-        logo_width: 80
-        description: Nullam id dolor id nibh ultricies vehicula ut id elit.
-      - name: company
-        logo_width: 80
-        description: Nullam id dolor id nibh ultricies vehicula ut id elit.
 ---
 
 <div class="c-ventures-header">
@@ -84,7 +75,9 @@ countries:
       </div>
     <% end %>
   </div>
-  <%= partial('partials/down_arrow', :locals => { :link => "#myanmar" }) %>
+  <div class="u-hide--medium-down">
+    <%= partial('partials/down_arrow', :locals => { :link => "#myanmar" }) %>
+  </div>
 </div>
 
 <% current_page.data.countries.each_with_index do |country, index| %>
@@ -94,7 +87,7 @@ countries:
         <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md">
           <div class="c-venture-title">
             <div class="c-venture-title__content">
-              <img src="/images/ventures/<%= country.name.downcase %>/<%= country.name.downcase %>-flag.png" class="c-venture-title__flag">
+              <img src="/images/ventures/flags/<%= country.name.downcase %>.png" class="c-venture-title__flag">
               <h2 class="c-venture-title__name"><%= country.name %></h2>
               <p><%= country.subheading %></p>
             </div>
@@ -113,3 +106,26 @@ countries:
     </div>
   </div>
 <% end %>
+
+<div class="c-section c-section--alt">
+  <div class="o-container">
+    <div class="o-grid">
+      <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md">
+        <div class="c-venture-title">
+          <div class="c-venture-title__content">
+            <img src="/images/ventures/flags/cuba.png" class="c-venture-title__flag">
+            <h2 class="c-venture-title__name">Cuba</h2>
+            <p>Building Partnerships for Prosperity</p>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md">
+        <div class="c-venture-title">
+          <div class="c-venture-title__content">
+            <p>We’re on the ground right now, finding and selecting the best entrepreneurial talent Cuba has to offer. We’re excited to show off our great new partner companies soon. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

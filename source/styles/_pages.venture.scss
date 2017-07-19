@@ -46,12 +46,10 @@
 }
 
 .c-venture-section__logo {
-  margin-bottom: $spacing-small;
-  max-height: 32px;
+  margin-bottom: $spacing-medium;
 
   @include mq(medium-up) {
-    margin-bottom: $spacing-medium;
-    max-height: 40px;
+    margin-bottom: $spacing-large;
   }
 }
 

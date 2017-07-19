@@ -5,7 +5,11 @@
 
       <div class="c-venture-section__content">
         <div class="c-venture-section__content-inner">
-          <img class="c-venture-section__logo" src="<%= current_page.data.name.downcase %>.png">
+          <img
+            class="c-venture-section__logo"
+            width="<%= current_page.data.logo_width %>"
+            src="/images/ventures/<%= current_page.data.country.downcase %>/<%= current_page.data.name.downcase %>-dark.png"
+          >
           <h3><%= current_page.data.description %></h3>
           <%= markdown(current_page.data.bio) %>
         </div>
