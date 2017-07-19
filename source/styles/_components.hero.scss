@@ -8,17 +8,13 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-image: url('/images/hero.jpg');
 }
 
 .c-hero__heading,
 .c-hero__subheading {
   color: $white;
   text-shadow: 0 1px 2px rgba($black, 0.25);
-}
-
-.c-hero__heading {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .c-hero__subheading {
@@ -39,12 +35,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba($black, 0.6);
+  background-color: rgba($black, 0.4);
   padding: $spacing-large 0;
 
-  @supports ((backdrop-filter: blur(4px))) {
-    background-color: rgba($black, 0.5);
-    backdrop-filter: blur(4px);
+  @supports ((backdrop-filter: blur(8px))) {
+    background-color: rgba($black, 0.35);
+    backdrop-filter: blur(8px);
   }
 
   @include mq(medium-up) {
