@@ -74,13 +74,16 @@
   flex: 1;
   color: rgba($white, 0.75);
 
+  @include mq(small-only) {
+    flex-direction: column;
+  }
+
   @include mq(medium-up) {
     justify-content: center;
   }
 
   @include mq(medium-down) {
     text-align: left;
-    padding-right: $spacing-medium;
   }
 
   @include mq(small-down) {
