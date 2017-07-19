@@ -121,8 +121,11 @@ $skew-angle: 22deg;
 
 .c-venture-title {
   position: relative;
-  border: 1px solid $border-color;
-  padding: $spacing-large;
+  box-shadow: inset 0 0 0 1px $border-color;
+
+  @include mq(small-down) {
+    padding: $spacing-large;
+  }
 
   @include mq(small-up) {
     padding-bottom: 100%;

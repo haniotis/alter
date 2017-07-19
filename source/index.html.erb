@@ -21,21 +21,14 @@ stats:
       </div>
     </div>
   </div>
-  <%= partial('partials/down_arrow', :locals => { :link => "#about" }) %>
+  <div class="c-hero__meta">
+    <div class="o-container c-hero__meta-container">
+      <% current_page.data.stats.each do |stat| %>
+        <div class="c-hero__meta-item">
+          <h3 class="c-hero__meta-digit"><%= stat.digit %></h3>
+          <p><%= stat.label %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<section class="c-home-main" id="about">
-  <div class="c-home-main__video-wrap">
-    <button class="c-home-main__play">
-      <%= inline_svg("/icons/play-video.svg", class: "c-home-main__play-icon o-icon o-icon--white") %>
-    </button>
-  </div>
-  <div class="c-home-main__content">
-    <% current_page.data.stats.each do |stat| %>
-      <div class="c-home-main__item">
-        <h3 class="h1 c-home-main__digit"><%= stat.digit %></h3>
-        <p><%= stat.label %></p>
-      </div>
-    <% end %>
-  </div>
-</section>
