@@ -97,6 +97,10 @@
   color: $white;
   margin: 0 $spacing-small 0 0;
 
+  @include mq(small-only) {
+    margin-right: 0;
+  }
+
   @include mq(medium-up) {
     margin-right: $spacing-medium;
   }

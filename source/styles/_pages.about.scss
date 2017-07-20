@@ -29,6 +29,7 @@
 // Typed
 
 .typed-cursor {
+  font-weight: $font-weight-regular;
   color: rgba($primary-color, 0.15);
   animation: flash 1s linear both infinite !important; // Overwrite typed plugin
 }
