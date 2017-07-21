@@ -22,14 +22,13 @@ smoothScroll.init({
 
 $(function() {
   var nav = $(".js-nav");
-  var navOffset = nav.offset();
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= navOffset.top) {
+    if (scroll >= 0) {
       nav.addClass("is-fixed");
     }
-    if (scroll <= navOffset.top) {
+    if (scroll <= 0) {
       nav.removeClass("is-fixed");
     }
   });
