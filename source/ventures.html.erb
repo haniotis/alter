@@ -8,6 +8,7 @@ header:
 countries:
   - name: Myanmar
     subheading: Leapfrogging Tech Innovation
+    count_no: 5
     ventures:
       - name: oway
         logo_width: 120
@@ -26,6 +27,7 @@ countries:
         description: Michael and Yarzar make it their mission to give everyone from government to pregnant mothers the health technology they need to thrive
   - name: Haiti
     subheading: Liberation from Aid
+    count_no: 5
     ventures:
       - name: kreyol-essence
         logo_width: 130
@@ -45,6 +47,7 @@ countries:
         description: Guel, a Harvard business graduate, runs a locally sourced and manufactured Haitian cereal brand
   - name: Afghanistan
     subheading: Peace Through Entrepreneurship
+    count_no: 4
     ventures:
       - name: acb
         logo_width: 72
@@ -82,7 +85,10 @@ countries:
           <div class="c-venture-title">
             <div class="c-venture-title__content">
               <img src="/images/ventures/flags/<%= country.name.downcase %>.png" class="c-venture-title__flag">
-              <h2 class="c-venture-title__name"><%= country.name %></h2>
+              <h2 class="c-venture-title__name">
+                <%= country.name %>
+                <sup class="c-venture-title__count"><%= country.count_no %></sup>
+              </h2>
               <p><%= country.subheading %></p>
             </div>
           </div>
