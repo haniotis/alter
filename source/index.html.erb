@@ -11,7 +11,7 @@ stats:
   - digit: 12
     label: ventures leading the way
   - digit: $1.1M
-    label: value added by Alter
+    label: lives impacted by Alter portfolio companies
 ---
 
 <div class="c-hero u-cover">
@@ -29,7 +29,7 @@ stats:
     <div class="o-container c-hero__meta-container">
       <% current_page.data.stats.each do |stat| %>
         <div class="c-hero__meta-item">
-          <h3 class="c-hero__meta-digit"><%= stat.digit %></h3>
+          <h2 class="c-hero__meta-digit"><%= stat.digit %></h2>
           <p><%= stat.label %></p>
         </div>
       <% end %>
