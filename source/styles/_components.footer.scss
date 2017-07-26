@@ -11,22 +11,22 @@
 }
 
 .c-footer__main {
-  @include vertical-padding(3rem);
+  @include vertical-padding(2rem);
 
   @include mq(small-up) {
-    @include vertical-padding(4rem);
+    @include vertical-padding(3rem);
   }
 
   @include mq(medium-up) {
-    @include vertical-padding(5rem);
+    @include vertical-padding(4rem);
   }
 
   @include mq(large-up) {
-    @include vertical-padding(6rem);
+    @include vertical-padding(5rem);
   }
 
   @include mq(x-large-up) {
-    @include vertical-padding(7rem);
+    @include vertical-padding(6rem);
   }
 }
 

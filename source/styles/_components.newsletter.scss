@@ -47,6 +47,7 @@
 .c-newsletter__form {
   display: flex;
   flex: 1;
+  max-width: 640px;
 
   @include mq(medium-up) {
     margin-left: 2rem;
