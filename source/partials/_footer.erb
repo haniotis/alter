@@ -9,43 +9,29 @@
 
         <div class="o-grid__item u-1/2 u-1/4@md">
           <ul class="c-footer__list o-list o-list--bare">
-            <li class="c-footer__item">
-              <a href="/about/" class="c-footer__link">About</a>
-            </li>
-            <li class="c-footer__item">
-              <a href="/ventures/" class="c-footer__link">Our Ventures</a>
-            </li>
-            <li class="c-footer__item">
-              <a href="https://medium.com/alterglobal" class="c-footer__link">Blog</a>
-            </li>
+            <% data.menuElements.main_menu.each do |menuElement| %>
+              <li class="c-footer__item">
+                <a class="c-footer__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1].gsub('/', '') ? ' is-active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
+              </li>
+            <% end %>
           </ul>
         </div>
 
         <div class="o-grid__item u-1/2 u-1/4@md">
           <ul class="c-footer__list o-list o-list--bare">
-            <li class="c-footer__item">
-              <a href="https://www.facebook.com/VentureBoldly/" class="c-footer__link" target="_blank">
-                <%= inline_svg("icons/facebook.svg", class: "o-icon c-footer__icon") %>
-                <span>Facebook</span>
-              </a>
-            </li>
-            <li class="c-footer__item">
-              <a href="https://twitter.com/Alter_Global" class="c-footer__link" target="_blank">
-                <%= inline_svg("icons/twitter.svg", class: "o-icon c-footer__icon") %>
-                <span>Twitter</span>
-              </a>
-            </li>
-            <li class="c-footer__item">
-              <a href="https://www.linkedin.com/company-beta/15077937/" class="c-footer__link" target="_blank">
-                <%= inline_svg("icons/linkedin.svg", class: "o-icon c-footer__icon") %>
-                <span>LinkedIn</span>
-              </a>
-            </li>
+            <% data.menuElements.social_links.each do |menuElement| %>
+              <li class="c-footer__item">
+                <a class="c-footer__link" href="<%= menuElement.href %>">
+                  <%= inline_svg("icons/#{menuElement.title.downcase}.svg", class: "o-icon c-footer__icon") %>
+                  <%= menuElement.title %>
+                </a>
+              </li>
+            <% end %>
           </ul>
         </div>
 
         <div class="o-grid__item u-1/2 u-1/4@md">
-          <small>Alter Global, LLC<br>199 New Montgomery<br>San Francisco, CA 94105</small>
+          <small>Alter Global<br>1276 Willis St., No. 200<br>Redding, CA 96001</small>
         </div>
 
       </div>
