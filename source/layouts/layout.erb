@@ -2,14 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Alter</title>
-    <meta name="description" content="">
+    <title><% if current_page.path == "index.html" %>Alter<% else %><%= current_page.data.title %> | Alter<% end %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Alter" />
-    <meta property="og:type" content="Website" />
-    <meta property="og:url" content="https://alter.global/" />
-    <meta property="og:image" content="#" />
-    <meta property="og:description" content="#" />
+    <meta name="description" content="Scaling frontier ventures with Silicon Valley resources">
+
+    <!-- Facebook -->
+
+    <meta name="og:title" content="Alter" />
+    <meta name="og:type" content="Website" />
+    <meta name="og:url" content="http://alter.global/" />
+    <meta name="og:image" content="/images/share-image.png">
+    <meta name="og:description" content="Scaling frontier ventures with Silicon Valley resources" />
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="/images/share-image.png">
+    <meta name="twitter:title" content="Alter">
+    <meta name="twitter:description" content="Scaling frontier ventures with Silicon Valley resources">
+    <meta name="twitter:url" content="http://alter.global/">
 
     <script src="https://use.typekit.net/mvz8ikg.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
