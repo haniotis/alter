@@ -1,8 +1,8 @@
 main_menu:
 - title: About Us
-  href: "#"
+  href: "/about/"
 - title: Our Ventures
-  href: "#"
+  href: "/ventures/"
 - title: Blog
   href: "https://medium.com/alterglobal"
 
