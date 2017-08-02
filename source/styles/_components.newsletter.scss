@@ -44,11 +44,10 @@
   }
 }
 
-.c-newsletter__form {
+.c-newsletter__form-wrap {
   display: flex;
   flex: 1;
   max-width: 640px;
-
   @include mq(medium-up) {
     margin-left: 2rem;
   }
@@ -60,6 +59,11 @@
   @include mq(x-large-up) {
     margin-left: 8rem;
   }
+}
+
+.c-newsletter__form {
+  display: flex;
+  flex: 1;
 }
 
 .c-newsletter__btn {
