@@ -1,0 +1,1 @@
+webpackJsonp([2],[function(n,s,o){(function(n){"use strict";n(".js-toggle-nav").click(function(){n(".js-mobile-nav").toggleClass("is-open")}),n(function(){var s=n(".js-nav");n(window).scroll(function(){var o=n(window).scrollTop();o>=0&&s.addClass("is-fixed"),o<=0&&s.removeClass("is-fixed")})})}).call(s,o(1))}]);

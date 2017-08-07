@@ -1,4 +1,4 @@
-webpackJsonp([1],[function(t,e,s){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}var i=s(3),r=n(i);new r.default(".js-typed",{stringsElement:".js-typed-strings",typeSpeed:50,backDelay:1500,startDelay:0,backSpeed:25,loop:!0})},,,function(t,e,s){/*!
+webpackJsonp([1],[function(t,e,s){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}var i=s(2),r=n(i);new r.default(".js-typed",{stringsElement:".js-typed-strings",typeSpeed:50,backDelay:1500,startDelay:0,backSpeed:25,loop:!0})},,function(t,e,s){/*!
 	 * 
 	 *   typed.js - A JavaScript Typing Animation Library
 	 *   Author: Matt Boldt <me@mattboldt.com>
