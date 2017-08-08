@@ -51,3 +51,11 @@
 .c-founder__name {
   margin-bottom: $spacing-small;
 }
+
+.c-founder__bio {
+  display: block;
+
+  @include mq(medium-up) {
+    margin-top: -$spacing-small;
+  }
+}
