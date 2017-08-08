@@ -39,12 +39,12 @@
 
   @include mq(large-up) {
     margin-right: $spacing-x-large;
-    @include square(90px);
+    @include square(110px);
   }
 
   @include mq(x-large-up) {
     margin-right: $spacing-xx-large;
-    @include square(120px);
+    @include square(140px);
   }
 }
 
