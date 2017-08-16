@@ -21,7 +21,24 @@
   }
 }
 
+.c-hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate3d(-50%, -50%, 0);
+
+  @include mq(medium-down) {
+    display: none;
+  }
+}
+
 .c-hero__content {
+  position: relative;
+  z-index: 10; // Position above video
 
   @include mq(medium-up) {
     margin-top: -1rem;
@@ -50,6 +67,7 @@
 
 .c-hero__meta {
   position: absolute;
+  z-index: 10; // Position above video
   bottom: 0;
   left: 0;
   width: 100%;
