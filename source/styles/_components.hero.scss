@@ -3,9 +3,12 @@
   padding-top: 9.5rem;
   padding-bottom: 20rem;
   overflow: hidden;
-  background-color: $grey;
+  background-color: $black;
   text-align: center;
-  background-image: url('/images/hero.jpg');
+
+  @include mq(medium-down) {
+    background-image: url('/images/hero.jpg');
+  }
 
   @include mq(small-up) {
     padding-top: 10rem;
