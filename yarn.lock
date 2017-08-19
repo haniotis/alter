@@ -2147,7 +2147,7 @@ slash@^1.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
 smooth-scroll@cferdinandi/smooth-scroll:
-  version "12.1.0"
+  version "10.1.0"
   resolved "https://codeload.github.com/cferdinandi/smooth-scroll/tar.gz/c4d8c3bbeb597777ae5bcf96674c7a7424cedbc0"
 
 sntp@1.x.x:
