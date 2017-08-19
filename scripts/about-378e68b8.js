@@ -1,0 +1,1 @@
+webpackJsonp([2],[function(s,e,i){(function(s){"use strict";s(".js-about-header-slideshow").each(function(){s(".js-about-header-slide").first().addClass("is-active"),setInterval(function(){var e=s(this).find(".is-active").removeClass("is-active"),i=e.next().length?e.next():s(this).children().eq(0);i.addClass("is-active")}.bind(this),2500)})}).call(e,i(1))}]);
