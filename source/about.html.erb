@@ -2,6 +2,13 @@
 title: About Us
 dark_arrow: true
 
+slides:
+  - heading: Find the World’s Best Entrepreneurs.
+  - heading: Scale High-Growth Ventures.
+  - heading: Transform Frontier Markets.
+  - heading: Connect Silicon Valley to the World.
+  - heading: Create Impact Through Entrepreneurship.
+
 mission:
   - heading: Find the best entrepreneurs in frontier markets
     subheading: Every nation has a few game-changing entrepreneurs who create outsized value. We select the highest character, highest competency management teams leading the most scalable ventures.
@@ -75,16 +82,13 @@ team:
       role: MD at Omidyar Network; Former President of Paypal & eBay International
 ---
 
-<div class="c-about-header">
-  <div class="o-container">
-    <h1 class="c-about-header__heading">We <span class="c-about-header__heading-accent js-typed"></span></h1>
-    <div class="js-typed-strings">
-      <span>Find the World’s Best Entrepreneurs.</span>
-      <span>Scale High-Growth Ventures.</span>
-      <span>Transform Frontier Markets.</span>
-      <span>Connect Silicon Valley to the World.</span>
-      <span>Create Impact Through Entrepreneurship.</span>
-    </div>
+<div class="c-about-header js-about-header">
+  <div class="js-about-header-slideshow">
+    <% current_page.data.slides.each do |slide| %>
+      <div class="c-about-header__slide js-about-header-slide">
+        <h1>We <span class="c-about-header__accent"><%= slide.heading %></span></h1>
+      </div>
+    <% end %>
   </div>
   <%= partial('partials/down_arrow', :locals => { :link => "#mission" }) %>
 </div>

@@ -25,6 +25,10 @@
 .c-advisor-list__section {
   margin-bottom: $spacing-large;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include mq(medium-up) {
     margin-bottom: $spacing-x-large;
   }

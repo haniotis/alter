@@ -20,8 +20,6 @@
     "clean-webpack-plugin": "^0.1.13",
     "cors": "^2.8.1",
     "jquery": "^3.1.1",
-    "packery": "^2.1.1",
-    "typed.js": "^2.0.5",
     "webpack": "^1.13.3",
     "webpack-bundle-analyzer": "^1.5.3"
   }
