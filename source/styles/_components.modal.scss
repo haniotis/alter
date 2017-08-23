@@ -15,14 +15,18 @@
   left: 0;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   text-align: center;
   overflow: auto;
   transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve;
-  background-color: rgba($black, 0.6);
-  pointer-events: none;
-  z-index: 600;
+  background-color: rgba($black, 0.8);
+  z-index: 999;
 
-  &.c-modal.is-visible {
+  &.is-loaded {
+    z-index: 600;
+  }
+
+  &.is-visible {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -57,7 +61,8 @@
   }
 }
 
-// modal container
+
+// Modal container
 
 .c-modal__container {
   position: relative;
@@ -68,55 +73,28 @@
   border-radius: $border-radius;
   opacity: 0;
   overflow: hidden;
-  transform: scale(0.9);
+  transform: scale(0.8);
   transition: transform $animation-time $animation-curve, opacity $animation-time $animation-curve;
   z-index: 450;
+  @include box-shadow;
 
   &--wide {
-    max-width: 720px;
+    max-width: 1040px;
   }
 
-  .is-visible & {
+  .c-modal.is-visible & {
     opacity: 1;
     transform: none;
   }
 }
 
-.c-modal__header,
-.c-modal__main {
-  padding: $spacing-medium;
-
-  @include mq(medium-up) {
-    padding: $spacing-large;
-  }
-}
-
-.c-modal__header {
-  text-align: left;
-  border-bottom: 1px solid $border-color;
-  display: flex;
-  align-items: center;
-  height: 56px;
-  justify-content: space-between;
-
-  @include mq(medium-up) {
-    height: 76px;
-  }
-}
-
-.c-modal__title {
-  margin: 0 $spacing-small 0 0;
-  line-height: $heading-line-height;
-}
-
-
-// Modal close
-
 .c-modal__close {
-  opacity: 0.7;
-  transition: opacity $animation-time $animation-curve;
+  position: absolute;
+  top: $spacing-large;
+  right: $spacing-large;
 
-  &:hover {
-    opacity: 1;
+  @include mq(medium-up) {
+    top: $spacing-x-large;
+    right: $spacing-x-large;
   }
 }

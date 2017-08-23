@@ -8,7 +8,7 @@ hero:
 stats:
   - digit: 4
     label: countries in transition
-  - digit: 12
+  - digit: 17
     label: ventures leading the way
   - digit: 1M +
     label: lives impacted by Alter portfolio companies
@@ -20,8 +20,8 @@ stats:
       <h1 class="c-hero__heading"><%= current_page.data.hero.heading %></h1>
       <h3 class="c-hero__subheading"><%= current_page.data.hero.subheading %></h3>
       <div class="c-btn-group">
-        <a href="/about/" class="c-btn c-btn--primary c-btn-group__item">About us</a>
-        <a href="/ventures/" class="c-btn c-btn--contrast c-btn-group__item">Our ventures</a>
+        <button class="js-trigger-video c-btn c-btn--primary c-btn-group__item">Watch Video</button>
+        <a href="/about/" class="c-btn c-btn--contrast c-btn-group__item">About Us</a>
       </div>
     </div>
   </div>
@@ -40,3 +40,5 @@ stats:
     <source src="/videos/alter.mp4" type="video/mp4">
   </video>
 </div>
+
+<%= partial "partials/video" %>

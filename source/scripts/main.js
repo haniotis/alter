@@ -7,6 +7,14 @@ $('.js-toggle-nav').click(function() {
 });
 
 
+// Video
+
+$('.js-trigger-video').click(function() {
+  $('.js-video-modal').toggleClass("is-visible");
+  $('.js-page').toggleClass("is-clipped");
+});
+
+
 // Fixed nav
 
 $(function() {
