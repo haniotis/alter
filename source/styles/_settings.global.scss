@@ -6,12 +6,15 @@ $border-radius: 0;
 
 // Spacing
 
-$spacing-small: 0.5rem;
-$spacing-medium: $spacing-small * 2;
-$spacing-large: $spacing-small * 3;
-$spacing-x-large: $spacing-small * 4;
-$spacing-xx-large: $spacing-small * 5;
-$spacing-xxx-large: $spacing-small * 6;
+$spacing-unit: 0.5rem;
+
+$spacing-tiny: $spacing-unit / 2;
+$spacing-small: $spacing-unit;
+$spacing-medium: $spacing-unit * 2;
+$spacing-large: $spacing-unit * 3;
+$spacing-x-large: $spacing-unit * 4;
+$spacing-xx-large: $spacing-unit * 5;
+$spacing-xxx-large: $spacing-unit * 6;
 
 
 // Media queries

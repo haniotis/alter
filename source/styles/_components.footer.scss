@@ -49,6 +49,10 @@
   }
 }
 
+.c-footer__list {
+  margin-top: -$spacing-tiny;
+}
+
 .c-footer__icon {
   margin-right: $spacing-medium;
   transition: fill $animation-time $animation-curve;
