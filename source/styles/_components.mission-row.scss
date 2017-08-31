@@ -21,11 +21,7 @@
 
 .c-mission-row__figure-wrap {
   position: relative;
-  height: 200px;
-
-  @include mq(small-up) {
-    height: 220px;
-  }
+  height: 240px;
 
   @include mq(medium-up) {
     height: 500px;
