@@ -8,6 +8,9 @@
         <a class="c-nav__link<%= (current_page.path.split('.')[0] == menuElement.href[1..-1].gsub('/', '') ? ' is-active"' : '') %>" href="<%= menuElement.href %>"><%= menuElement.title %></a>
       </li>
     <% end %>
+    <li class="c-nav__item">
+      <a class="c-btn c-btn--primary c-btn--small" href="https://www.donorhut.com/secure/4078-0m1xdi" target="_blank">Donate now</a>
+    </li>
   </ul>
   <button class="c-nav__toggle u-hide--medium-up js-toggle-nav">
     <%= inline_svg("/icons/hamburger.svg", class: "c-nav__hamburger o-icon") %>
