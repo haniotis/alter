@@ -1,6 +1,7 @@
 .c-mobile-nav {
   position: fixed;
   overflow: auto;
+  padding: $spacing-large $spacing-x-large;
   top: $spacing-small * 1.5;
   left: $spacing-small * 1.5;
   right: $spacing-small * 1.5;
@@ -29,17 +30,9 @@
   }
 }
 
-.c-mobile-nav__section {
-  padding: $spacing-large $spacing-x-large;
-
-  & + & {
-    border-top: 1px solid $border-color;
-  }
-}
-
 .c-mobile-nav__list {
   width: 100%;
-  margin: 0 0 $spacing-small 0;
+  margin: 0 0 $spacing-medium 0;
   padding: 0;
   list-style: none;
 }
@@ -49,7 +42,7 @@
   align-items: center;
   width: 100%;
   color: $grey-dark;
-  padding: $spacing-tiny 0;
+  padding: $spacing-tiny/2 0;
   @include font-size($h2-font-size);
 }
 
