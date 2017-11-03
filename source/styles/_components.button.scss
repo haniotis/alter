@@ -8,6 +8,7 @@
   justify-content: center;
   font-size: 12px;
   text-transform: uppercase;
+  border-radius: 0;
   letter-spacing: 1px;
   font-weight: $font-weight-bold;
   transition: color $animation-time $animation-curve, transform $animation-time $animation-curve, background-color $animation-time $animation-curve, box-shadow $animation-time $animation-curve;
