@@ -31,10 +31,10 @@
 
 .c-country__description {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -$spacing-small*1.5;
+  right: -$spacing-small*1.5;
+  bottom: -$spacing-small*1.5;
+  left: -$spacing-small*1.5;
   opacity: 0;
   visibility: hidden;
   color: $white;
