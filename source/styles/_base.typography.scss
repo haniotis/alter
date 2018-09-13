@@ -40,6 +40,10 @@ p, ul, ol {
   }
 }
 
+p a {
+  border-bottom: 1px solid $border-color;
+}
+
 a {
   text-decoration: none;
   color: inherit;
