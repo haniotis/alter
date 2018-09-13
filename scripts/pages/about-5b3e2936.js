@@ -8,6 +8,6 @@ $(document).ready(function(){
     arrows: false,
     autoplay: true,
     dots: true,
-    autoplaySpeed: 4000
+    autoplaySpeed: 2500
   });
 });
