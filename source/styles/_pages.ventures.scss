@@ -135,10 +135,14 @@ $skew-angle: 22deg;
 
 .c-venture-title__content {
   @include mq(small-up) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     padding: $spacing-large;
   }
 
@@ -147,15 +151,12 @@ $skew-angle: 22deg;
   }
 }
 
-.c-venture-title__name {
-  margin-bottom: $spacing-small;
+.c-venture-title__meta {
+  margin-top: auto;
 }
 
-.c-venture-title__count {
-  display: inline-block;
-  color: $primary-color;
-  transform: scale(0.75) translateX(-4px);
-  transform-origin: left center;
+.c-venture-title__name {
+  margin-bottom: $spacing-small;
 }
 
 .c-venture-title__flag {

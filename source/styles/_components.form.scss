@@ -59,6 +59,15 @@
   }
 }
 
+.c-field__hint {
+  display: block;
+  margin-top: $spacing-small;
+
+  @include mq(medium-up) {
+    margin-top: $spacing-small * 1.5;
+  }
+}
+
 
 // Inline
 

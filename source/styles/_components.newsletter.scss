@@ -21,7 +21,6 @@
 .c-newsletter__container {
   @include mq(medium-up) {
     display: flex;
-    align-items: center;
   }
 }
 

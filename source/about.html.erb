@@ -14,7 +14,7 @@ mission:
     subheading: Every nation has a few game-changing entrepreneurs who create outsized value. We select the highest character, highest competency management teams leading the most scalable ventures.
     icon: trophy
     photo: best-entrepreneurs.jpg
-  - heading: Connect them to Silicon Valley Resources
+  - heading: Connect them to Silicon Valley resources
     subheading: Even the best entrepreneurs in frontier markets lack access to the resources they need to scale. We match them with talent, networks, expertise, and investments from the world’s most prolific entrepreneurial ecosystem - Silicon Valley.
     icon: bridge
     photo: silicon-valley.jpg
@@ -24,24 +24,27 @@ mission:
     photo: impact.jpg
 
 where_we_work:
-  heading: Where we work
+  heading: Where We Work
   countries:
-    - name: myanmar
-      pretty_name: Myanmar
-      meta: Leapfrogging Tech Innovation
-      description: Political and economic reforms have turned Myanmar into one of the fastest growing economies in Asia. We see limitless potential in the country’s educated workforce that is dedicated to making good on the promise of newly opened markets. Myanmar is primed for the digital age.
-    - name: haiti
-      pretty_name: Haiti
-      meta: Liberation from Aid
-      description: Where foreign aid is failing, Alter’s entrepreneurs are successfully creating jobs and transforming their communities. Haiti boasts vast pools of talent and natural resources. We believe the right ventures can help pull the country’s economy away from cyclical poverty and reliance on outside assistance.
     - name: afghanistan
       pretty_name: Afghanistan
       meta: Peace Through Entrepreneurship
       description: Many outside observers see endless corruption and violence. We dug deeper and found an elite tier of Afghans leading businesses that buck the trend. They don’t rely on foreign aid. They refuse to bribe. And they turn strong profits. Alter’s entrepreneurs reach nation-wide to employ and empower their fellow citizens in this resource-rich nation.
+    - name: bangladesh
+      pretty_name: Bangladesh
+      meta: Solving growing urban challenges
     - name: cuba
       pretty_name: Cuba
       meta: Building Partnerships for Prosperity
       description: In a country that is flirting with a greater role for the private sector, we see the opportunity for entrepreneurial role-models to shape a nascent startup ecosystem. Our ventures in Cuba are well placed to set the tone for generations of entrepreneurs to come, and they’re building their businesses with some of the world’s greatest untapped human capital. Alter supports Cuban entrepreneurship in line with current US regulations.
+    - name: haiti
+      pretty_name: Haiti
+      meta: Liberation from Aid
+      description: Where foreign aid is failing, Alter’s entrepreneurs are successfully creating jobs and transforming their communities. Haiti boasts vast pools of talent and natural resources. We believe the right ventures can help pull the country’s economy away from cyclical poverty and reliance on outside assistance.
+    - name: myanmar
+      pretty_name: Myanmar
+      meta: Leapfrogging Tech Innovation
+      description: Political and economic reforms have turned Myanmar into one of the fastest growing economies in Asia. We see limitless potential in the country’s educated workforce that is dedicated to making good on the promise of newly opened markets. Myanmar is primed for the digital age.
 
 team:
   heading: Our Team
@@ -57,54 +60,60 @@ team:
       role: "Co-Founder/COO"
       link: https://www.linkedin.com/in/ozairali/
       bio: I love solving puzzles - especially those with a purpose. The elimination of poverty is the puzzle I want to solve in my lifetime. I was born in a middle-class family in a developing country, but have been exceptionally fortunate to go to some of the best schools, and work across four continents in the public and private sector. With all of that, if I don't solve this puzzle, well, who will?
+    - name: rita
+      pretty_name: Rita Chang
+      role: "Chief Marketing Officer"
+      link: https://www.linkedin.com/in/ritachang/
+      bio: "One of the best lessons I’ve learned over the years is the importance of creating a domino effect. What one thing can you do to create self-sustaining ripples of change? Whether it’s to amplify impact or to inspire others to also take action, find the one lever you can pull to create lasting change. This is what we strive to do every single day - by supporting our high-growth ventures, these high-character founders are not just building their companies, they’re building their countries."
     - name: kimh
       pretty_name: Kim Horwitz
-      role: "Chief of Staff"
+      role: "Director of Partnerships"
       link: https://www.linkedin.com/in/kimhorwitz/
       bio: "From living and researching in some of the world's least developed places, I've learned that entrepreneurship is accomplishing what decades of cookie-cutter international aid programs have failed to do: stimulate sustainable economic opportunities from the ground up. It's an honor to help empower the ventures that are creating prosperity and opportunity in the parts of the world that need it most."
   board:
     - name: jessica
       pretty_name: Jessica Jackley
-      role: "Co-Founder of Kiva; Partner at Collaborative Fund"
+      role: "Co-Founder, Kiva; Partner, Collaborative Fund"
     - name: allen
       pretty_name: Allen Taylor
-      role: MD of Endeavor Catalyst
+      role: MD, Endeavor Catalyst
   advisors:
     - name: chris
       pretty_name: Chris Larsen
       role: "Executive Chairman, Ripple"
     - name: gary
       pretty_name: Gary Pinkus
-      role: "Managing Partner in North America, McKinsey"
-    - name: russ
-      pretty_name: Russ Siegelman
-      role: "Chair, Global Innovation Fund; Former Partner at Kleiner Perkins"
+      role: "Chairman & Senior Partner, McKinsey North America"
     - name: bob
       pretty_name: Bob King
-      role: "Founder of Stanford Institute for Innovation in Developing Economies; Early Investor in Baidu"
-    - name: kim
-      pretty_name: Kim Polese
-      role: "Entrepreneur who launched Java; VC at Broadway Angels"
+      role: "Founder, Stanford Institute for Innovation in Developing Economies; Early Investor, Baidu"
     - name: kevin
       pretty_name: Kevin Taweel
       role: CEO, Asurion
+    - name: kim
+      pretty_name: Kim Polese
+      role: "Entrepreneur who launched Java; VC at Broadway Angels; Chairman, ClearStreet; Chairman; CrowdSmart"
     - name: matt
       pretty_name: Matt Bannick
-      role: MD at Omidyar Network; Former President of Paypal & eBay International
+      role: "Board of Directors & Former Managing Partner; Omidyar Network; Former President, PayPal & eBay International"
+    - name: russ
+      pretty_name: Russ Siegelman
+      role: "Former Chair, Global Innovation Fund; Former Partner, Kleiner Perkins"
     - name: scott
       pretty_name: Scott Brady
       role: Co-Founder & General Partner, Innovation Endeavors
 ---
 
-<div class="c-about-header js-about-header">
-  <div class="js-about-header-slideshow">
+<div class="c-about-header">
+  <div class="js-about-header-slideshow c-about-header__slideshow">
     <% current_page.data.slides.each do |slide| %>
-      <div class="c-about-header__slide js-about-header-slide">
-        <h1>We <span class="c-about-header__accent"><%= slide.heading %></span></h1>
+      <div>
+        <div class="c-about-header__slide">
+          <h1>We <span class="c-about-header__accent"><%= slide.heading %></span></h1>
+        </div>
       </div>
     <% end %>
   </div>
-  <%= partial('partials/down_arrow', :locals => { :link => "#mission" }) %>
 </div>
 
 <div id="mission">
@@ -132,16 +141,18 @@ team:
       </div>
     </div>
     <div class="c-section__block">
-      <div class="o-grid">
+      <div class="o-grid o-grid--center">
         <% current_page.data.where_we_work.countries.each do |country| %>
-          <div class="o-grid__item u-1/1 u-1/2@sm u-1/4@lg u-flex">
+          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@lg u-flex">
             <a href="/ventures/#<%= country.name %>" class="c-country">
               <%= inline_svg("/about/countries/#{country.name}.svg", class: "c-country__map") %>
               <h3 class="c-country__name"><%= country.pretty_name %></h3>
               <p class="c-country__meta"><%= country.meta %></p>
-              <div class="c-country__description u-hide--medium-down">
-                <small><%= country.description %></small>
-              </div>
+              <% if country.description %>
+                <div class="c-country__description u-hide--medium-down">
+                  <small><%= country.description %></small>
+                </div>
+              <% end %>
             </a>
           </div>
         <% end %>
@@ -166,7 +177,7 @@ team:
               <div style="background-image: url('/images/about/team/<%= founder.name %>.jpg')" class="c-founder__photo u-cover"></div>
               <div>
                 <h3 class="c-founder__name"><%= founder.pretty_name %></h3>
-                <p><%= founder.role %></p>
+                <p><small><%= founder.role %></small></p>
                 <p class="c-founder__bio"><%= founder.bio %></p>
               </div>
             </a>

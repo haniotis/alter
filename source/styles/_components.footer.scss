@@ -82,3 +82,15 @@
     fill: $grey-light !important; // Overwrite color set in logo file
   }
 }
+
+.c-footer__meta {
+  display: block;
+
+  & + & {
+    margin-top: $spacing-small;
+
+    @include mq(medium-up) {
+      margin-top: $spacing-medium;
+    }
+  }
+}

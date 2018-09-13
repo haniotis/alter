@@ -1,7 +1,7 @@
 .c-about-header {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-color: $white;
 }
 
@@ -9,24 +9,74 @@
   color: $primary-color;
 }
 
-.c-about-header__slide {
-  position: absolute;
+.c-about-header__slideshow {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: $spacing-large;
+
+    @include mq(small-up) {
+      padding: $spacing-x-large;
+    }
+
+    @include mq(medium-up) {
+      padding: $spacing-xxx-large;
+    }
+
+    @include mq(large-up) {
+      padding: 4rem;
+    }
+
+    li {
+      cursor: pointer;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 $spacing-tiny;
+      background-color: $border-color;
+      transition: all $animation-time $animation-curve;
+
+      &:hover {
+        background-color: $grey-light;
+      }
+
+      &.slick-active {
+        background-color: $secondary-color;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+}
+
+.c-about-header__frame {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.c-about-header__slide {
+  width: 100%;
+  height: 90vh;
   padding: 5% 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity $animation-time*2 $animation-curve, visibility $animation-time*2 $animation-curve;
-
-  &.is-active {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 .c-about-header__accent {

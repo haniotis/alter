@@ -42,6 +42,10 @@
   align-items: center;
 }
 
+.o-grid--center {
+  justify-content: center;
+}
+
 .o-grid__item {
   padding-left: $spacing-small;
   padding-right: $spacing-small;

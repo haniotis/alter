@@ -22,11 +22,11 @@
   height: 100%;
   padding: $spacing-large;
   color: $white;
-  background-color: rgba($black, 0.5);
+  background-color: rgba($black, 0.6);
   opacity: 0;
   margin: 0;
   visibility: hidden;
-  transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve; 
+  transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve;
   z-index: 20; // Position above photo + logo
 
   @include mq(large-up) {

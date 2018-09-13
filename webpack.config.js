@@ -7,7 +7,8 @@ module.exports = {
     main: './source/scripts/main.js',
     about: './source/scripts/pages/about.js',
     vendor: [
-      'jquery'
+      'jquery',
+      'slick-carousel'
     ]
   },
 

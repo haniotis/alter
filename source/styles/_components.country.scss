@@ -47,6 +47,10 @@
     display: block; // Make sure proper line-height is applied
   }
 
+  @include mq(large-up) {
+    padding: $spacing-x-large;
+  }
+
   .c-country:hover & {
     opacity: 1;
     visibility: visible;

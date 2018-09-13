@@ -53,23 +53,3 @@
 .u-text-accent {
   color: $secondary-color !important;
 }
-
-.u-text-link-pdf {
-  border-bottom: 1px solid currentColor;
-}
-
-// Links
-
-.u-text-link {
-  color: $grey-dark;
-  padding-bottom: $spacing-small/3;
-  border-bottom: 1px solid currentColor;
-}
-
-.u-text-underline {
-  border-bottom: 1px solid currentColor;
-}
-
-.u-text-bold {
-  font-weight: $font-weight-bold !important;
-}
