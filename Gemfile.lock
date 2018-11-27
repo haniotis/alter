@@ -118,11 +118,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (>= 4.0.0)
+  middleman (>= 4.2.1)
   middleman-autoprefixer
   middleman-gh-pages
   middleman-livereload
   nokogiri
 
 BUNDLED WITH
-   1.16.1
+   1.17.1
