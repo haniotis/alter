@@ -1,1 +1,0 @@
-webpackJsonp([2],[function(e,t,n){(function(e){"use strict";function t(e){return e&&e.__esModule?e:{default:e}}var o=n(2);t(o);e(document).ready(function(){e(".js-about-header-slideshow").slick({infinite:!0,arrows:!1,autoplay:!0,dots:!0,autoplaySpeed:2500})})}).call(t,n(1))}]);
