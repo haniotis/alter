@@ -1,5 +1,3 @@
-import smoothScroll from 'smooth-scroll'
-
 // Mobile nav
 
 $('.js-toggle-nav').click(function() {
@@ -38,15 +36,3 @@ $(function() {
     }
   });
 });
-
-
-// Smooth scroll
-
-var navHeight = $(".js-nav").outerHeight();
-
-smoothScroll.init({
-  selector: '[data-scroll]',
-  speed: 350,
-  offset: navHeight,
-  easing: 'easeInOutCubic'
-})
