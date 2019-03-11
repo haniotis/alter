@@ -11,8 +11,11 @@
 
 .c-country__map {
   @include square(180px);
-  fill: lighten($secondary-color, 25%);
   margin-bottom: $spacing-medium;
+
+  * {
+    fill: $grey;
+  }
 }
 
 .c-country__name {

@@ -8,14 +8,14 @@
           <img
             class="c-venture-section__logo"
             width="<%= current_page.data.logo_width %>"
-            src="/images/ventures/<%= current_page.data.country.downcase %>/<%= current_page.data.name.downcase %>-dark.png"
+            src="/images/ventures/<%= current_page.data.name.downcase %>-dark.png"
           >
           <h3><%= current_page.data.description %></h3>
           <%= markdown(current_page.data.bio) %>
         </div>
       </div>
 
-      <div class="c-venture-section__testimonial u-cover js-venture-testimonial" style="background-image: url('/images/ventures/<%= current_page.data.country.downcase %>/<%= current_page.data.name.downcase %>-large.jpg');">
+      <div class="c-venture-section__testimonial u-cover js-venture-testimonial" style="background-image: url('/images/ventures/<%= current_page.data.name.downcase %>-large.jpg');">
         <div class="c-venture-section__quote u-cover">
           <h4 class="u-text-contrast"><%= current_page.data.testimonial.quote %></h4>
           <p class="c-venture-section__author">— <%= current_page.data.testimonial.author %></p>

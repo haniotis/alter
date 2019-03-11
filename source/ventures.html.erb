@@ -7,62 +7,43 @@ header:
     - name: Scale
     - name: Transform
 
-countries:
-  - name: Afghanistan
-    subheading:
-    ventures:
-      - name: ahg
-        logo_width: 108
-        description: Sanzar leads this integrated business services group dedicated to courage, integrity, and innovation.
-        featured: true
-  - name: Bangladesh
-    subheading: 
-    ventures:
-      - name: pathao
-        logo_width: 124
-        description: Elius leads a team of 500+ employees, including ex-Uber and -Goldman Sachs talent, to create the country’s leading ridesharing and lifestyle app.
-      - name: chaldal
-        logo_width: 138
-        description: Backed by the IFC & Y Combinator, Wharton alumnus Waseem runs the country's top online grocery retailer to help consumers bypass serious traffic concerns.
-      - name: praava-health
-        logo_width: 160
-        description: With a background at Harvard, Columbia, BCG, and the World Bank, Sylvana is transforming healthcare for the country’s growing middle class.
-  - name: Cuba
-    subheading:
-    meta: Alter supports Cuban entrepreneurship in line with current US regulations.
-    ventures:
-      - name: alamesa
-        logo_width: 100
-        description: Yondainer leads Cuba’s first and most widely used restaurant app.
-  - name: Haiti
-    subheading: 
-    ventures:
-      - name: kreyol-essence
-        logo_width: 130
-        description: Yve-Car runs a Haitian beauty products company that supports 1500 farmers
-        featured: true
-  - name: Myanmar
-    subheading:
-    ventures:
-      - name: oway
-        logo_width: 120
-        description: Nay Aung, of Google and Stanford, runs the Expedia and the Uber of Myanmar with 1500 employees
-      - name: city-mart
-        logo_width: 130
-        description: Win Win Tint, Forbes top 50 women in Asia, runs the largest retailer in Myanmar with 10,000 employees
-        featured: true
-      - name: impact-terra
-        logo_width: 136
-        description: Erwin leads this agricultural tech venture providing farmers the information and connections they need to succeed through their smartphones
-  - name: Nigeria
-    subheading:
-    ventures:
-      - name: paystack
-        logo_width: 166
-        description: Shola leads the Stripe of Africa (and invested in by Stripe)
-      - name: paga
-        logo_width: 148
-        description: Nigeria’s largest mobile money provider is run by Stanford GSB- and Cisco-alumnus Tayo
+ventures:
+  - name: ahg
+    logo_width: 108
+    description: Sanzar leads this integrated business services group dedicated to courage, integrity, and innovation.
+    featured: true
+  - name: pathao
+    logo_width: 124
+    description: Elius leads a team of 500+ employees, including ex-Uber and -Goldman Sachs talent, to create the country’s leading ridesharing and lifestyle app.
+  - name: chaldal
+    logo_width: 138
+    description: Backed by the IFC & Y Combinator, Wharton alumnus Waseem runs the country's top online grocery retailer to help consumers bypass serious traffic concerns.
+  - name: praava-health
+    logo_width: 160
+    description: With a background at Harvard, Columbia, BCG, and the World Bank, Sylvana is transforming healthcare for the country’s growing middle class.
+  - name: alamesa
+    logo_width: 100
+    description: Yondainer leads Cuba’s first and most widely used restaurant app.
+  - name: kreyol-essence
+    logo_width: 130
+    description: Yve-Car runs a Haitian beauty products company that supports 1500 farmers
+    featured: true
+  - name: oway
+    logo_width: 120
+    description: Nay Aung, of Google and Stanford, runs the Expedia and the Uber of Myanmar with 1500 employees
+  - name: city-mart
+    logo_width: 130
+    description: Win Win Tint, Forbes top 50 women in Asia, runs the largest retailer in Myanmar with 10,000 employees
+    featured: true
+  - name: impact-terra
+    logo_width: 136
+    description: Erwin leads this agricultural tech venture providing farmers the information and connections they need to succeed through their smartphones
+  - name: paystack
+    logo_width: 166
+    description: Shola leads the Stripe of Africa (and invested in by Stripe)
+  - name: paga
+    logo_width: 148
+    description: Nigeria’s largest mobile money provider is run by Stanford GSB- and Cisco-alumnus Tayo
 ---
 
 <div class="c-ventures-header">
@@ -79,32 +60,26 @@ countries:
   </div>
 </div>
 
-<% current_page.data.countries.each_with_index do |country, index| %>
-  <div class="c-section <%= index % 2 == 0 ? '' : 'c-section--alt' %>" id="<%= country.name.downcase %>">
-    <div class="o-container">
+<div class="c-section">
+  <div class="o-container">
+
+    <div class="c-section__block u-text-center">
+      <h2>Since 2015, we’ve launched in 7 countries</h2>
+    </div>
+
+    <div class="c-section__block">
       <div class="o-grid">
-        <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md">
-          <div class="c-venture-title">
-            <div class="c-venture-title__content">
-              <img src="/images/ventures/flags/<%= country.name.downcase %>.png" class="c-venture-title__flag">
-              <h2 class="c-venture-title__name">
-                <%= country.name %>
-              </h2>
-              <p><%= country.subheading %></p>
-              <% if country.meta %><small class="c-venture-title__meta"><%= country.meta %></small><% end %>
-            </div>
-          </div>
-        </div>
-        <% country.ventures.each do |venture| %>
+        <% current_page.data.ventures.each do |venture| %>
           <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md">
             <a class="c-venture<% if !venture.featured %> c-venture--inactive<% end %>" href="<% if venture.featured %>/ventures/<%= venture.name %><% else %>#1<% end %>">
               <p class="c-venture__text"><%= venture.description %></p>
-              <img src="/images/ventures/<%= country.name.downcase %>/<%= venture.name %>.png" class="c-venture__logo" width="<%= venture.logo_width %>">
-              <div class="c-venture__photo u-cover" style="background-image: url('/images/ventures/<%= country.name.downcase %>/<%= venture.name %>.jpg');"></div>
+              <img src="/images/ventures/<%= venture.name %>.png" class="c-venture__logo" width="<%= venture.logo_width %>">
+              <div class="c-venture__photo u-cover" style="background-image: url('/images/ventures/<%= venture.name %>.jpg');"></div>
             </a>
           </div>
         <% end %>
       </div>
     </div>
+
   </div>
-<% end %>
+</div>

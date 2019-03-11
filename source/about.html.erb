@@ -7,7 +7,7 @@ slides:
   - heading: Scale High-Growth Ventures.
   - heading: Transform Emerging Markets.
   - heading: Connect Silicon Valley to the World.
-  - heading: Are Creating a Community of the World's Best Tech Founders.
+  - heading: Are Creating a Network of the World's Best Tech Founders.
 
 mission:
   - heading: Find the best entrepreneurs in emerging markets
@@ -43,7 +43,7 @@ where_we_work:
       meta:
     - name: nigeria
       pretty_name: Nigeria
-      meta: 
+      meta:
     - name: pakistan
       pretty_name: Pakistan
       meta:
@@ -56,22 +56,22 @@ team:
       pretty_name: Jesse Sullivan
       role: "Founder/CEO"
       link: https://www.linkedin.com/in/jsully3/
-      bio: 
+      bio:
     - name: ozair
       pretty_name: Ozair Ali
       role: "Co-Founder/COO"
       link: https://www.linkedin.com/in/ozairali/
-      bio: 
+      bio:
     - name: rita
       pretty_name: Rita Chang
       role: "Chief Marketing Officer"
       link: https://www.linkedin.com/in/ritachang/
-      bio: 
+      bio:
     - name: kimh
       pretty_name: Kim Horwitz
       role: "Director of Partnerships"
       link: https://www.linkedin.com/in/kimhorwitz/
-      bio: 
+      bio:
   board:
     - name: jessica
       pretty_name: Jessica Jackley
@@ -135,7 +135,7 @@ team:
   <% end %>
 </div>
 
-<section class="c-section c-section--accent u-text-center">
+<section class="c-section c-section--dark u-text-center">
   <div class="o-container">
     <div class="c-section__block">
       <div class="c-section-heading c-section-heading--lowlight">
@@ -146,19 +146,16 @@ team:
       <div class="o-grid o-grid--center">
         <% current_page.data.where_we_work.countries.each do |country| %>
           <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@lg u-flex">
-            <a href="/ventures/#<%= country.name %>" class="c-country">
+            <a href="/ventures/" class="c-country">
               <%= inline_svg("/about/countries/#{country.name}.svg", class: "c-country__map") %>
-              <h3 class="c-country__name"><%= country.pretty_name %></h3>
-              <p class="c-country__meta"><%= country.meta %></p>
-              <% if country.description %>
-                <div class="c-country__description u-hide--medium-down">
-                  <small><%= country.description %></small>
-                </div>
-              <% end %>
+              <h4 class="c-country__name"><%= country.pretty_name %></h4>
             </a>
           </div>
         <% end %>
       </div>
+    </div>
+    <div class="c-section__block u-text-center">
+      <p><small>Launching in Spring 2019: Indonesia, Kenya, South Africa, USA, and Vietnam.</small></p>
     </div>
   </div>
 </section>
@@ -179,8 +176,7 @@ team:
               <div style="background-image: url('/images/about/team/<%= founder.name %>.jpg')" class="c-founder__photo u-cover"></div>
               <div>
                 <h3 class="c-founder__name"><%= founder.pretty_name %></h3>
-                <p><small><%= founder.role %></small></p>
-                <p class="c-founder__bio"><%= founder.bio %></p>
+                <p><%= founder.role %></p>
               </div>
             </a>
           <% end %>
