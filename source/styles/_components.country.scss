@@ -9,6 +9,11 @@
   }
 }
 
+.c-country--upcoming {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
 .c-country__map {
   @include square(180px);
   margin-bottom: $spacing-medium;
@@ -25,6 +30,15 @@
   @include mq(medium-up) {
     margin-bottom: $spacing-small;
   }
+}
+
+.c-country__tag {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba($white, 0.5);
+  font-size: 12px;
+  padding: 0 0.3em;
+  color: $grey-dark;
 }
 
 .c-country__meta {

@@ -28,25 +28,33 @@ where_we_work:
   countries:
     - name: afghanistan
       pretty_name: Afghanistan
-      meta:
     - name: bangladesh
       pretty_name: Bangladesh
-      meta:
     - name: cuba
       pretty_name: Cuba
-      meta:
     - name: haiti
       pretty_name: Haiti
-      meta:
+    - name: indonesia
+      pretty_name: Indonesia
+      upcoming: true
+    - name: kenya
+      pretty_name: Kenya
+      upcoming: true
     - name: myanmar
       pretty_name: Myanmar
-      meta:
     - name: nigeria
       pretty_name: Nigeria
-      meta:
     - name: pakistan
       pretty_name: Pakistan
-      meta:
+    - name: south-africa
+      pretty_name: South Africa
+      upcoming: true
+    - name: united-states
+      pretty_name: United States
+      upcoming: true
+    - name: vietnam
+      pretty_name: Vietnam
+      upcoming: true
 
 team:
   heading: Our Team
@@ -145,10 +153,10 @@ team:
     <div class="c-section__block">
       <div class="o-grid o-grid--center">
         <% current_page.data.where_we_work.countries.each do |country| %>
-          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@lg u-flex">
-            <a href="/ventures/" class="c-country">
+          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md u-1/4@lg u-flex">
+            <a href="/ventures/" class="c-country<% if country.upcoming %> c-country--upcoming<% end %>">
               <%= inline_svg("/about/countries/#{country.name}.svg", class: "c-country__map") %>
-              <h4 class="c-country__name"><%= country.pretty_name %></h4>
+              <h4 class="c-country__name"><%= country.pretty_name %> <% if country.upcoming %><span class="c-country__tag">2019</span><% end %></h4>
             </a>
           </div>
         <% end %>
