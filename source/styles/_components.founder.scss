@@ -1,51 +1,42 @@
 .c-founder {
-  display: flex;
-  align-items: center;
   width: 100%;
-  margin-bottom: $spacing-x-large;
+  display: block;
+  text-align: center;
 
-  @include mq(medium-up) {
-    margin-bottom: 3rem;
-    padding-right: 4rem;
-  }
-
-  @include mq(large-up) {
-    margin-bottom: 3.5rem;
-    padding-right: 5rem;
-  }
-
-  @include mq(x-large-up) {
-    padding-right: 6rem;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
+  @include mq(small-up) {
+    margin-bottom: $spacing-medium;
   }
 }
 
 .c-founder__photo {
   border-radius: 50%;
-  margin-right: $spacing-large;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $spacing-medium;
   flex-shrink: 0;
   box-shadow: inset 0 0 0 1px rgba($black, 0.1);
-  @include square(64px);
+  transition: opacity $animation-time $animation-curve;
+  @include square(96px);
+
+  .c-founder:hover & {
+    opacity: 0.85;
+  }
 
   @include mq(small-up) {
-    @include square(70px);
-  }
-
-  @include mq(medium-up) {
-    @include square(80px);
-  }
-
-  @include mq(large-up) {
-    margin-right: $spacing-x-large;
     @include square(110px);
   }
 
-  @include mq(x-large-up) {
-    margin-right: $spacing-xx-large;
+  @include mq(medium-up) {
+    @include square(120px);
+  }
+
+  @include mq(large-up) {
+    margin-bottom: $spacing-large;
     @include square(140px);
+  }
+
+  @include mq(x-large-up) {
+    @include square(180px);
   }
 }
 
@@ -54,9 +45,14 @@
 }
 
 .c-founder__logos {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
 
-  img {
-    // filter: grayscale(100%);
+.c-founder__logo {
+  position: static;
+
+  & + & {
+    margin-left: $spacing-small * 1.5;
   }
 }

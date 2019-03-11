@@ -31,3 +31,17 @@ $spacing-sizes: (
     }
   }
 }
+
+// Large
+
+@include mq(large-up) {
+  @each $property in $spacing-properties {
+    @each $direction in $spacing-directions {
+      @each $size, $value in $spacing-sizes {
+        .u-#{$property}#{$direction}#{$size}\@lg {
+          #{$property}#{$direction}: $value !important;
+        }
+      }
+    }
+  }
+}

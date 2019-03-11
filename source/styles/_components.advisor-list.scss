@@ -1,60 +1,30 @@
 .c-advisor-list {
   position: relative;
-
-  &:before {
-    @include mq(medium-up) {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -3rem;
-      height: 100%;
-      width: 1px;
-      background-color: $border-color;
-    }
-
-    @include mq(x-large-up) {
-      left: -4rem;
-    }
-  }  
-}
-
-.c-advisor-list__heading {
-  margin-bottom: $spacing-large;
-}
-
-.c-advisor-list__section {
-  margin-bottom: $spacing-large;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$spacing-small;
 
   @include mq(medium-up) {
-    margin-bottom: $spacing-x-large;
-  }
-
-  @include mq(large-up) {
-    margin-bottom: $spacing-xx-large;
+    margin: -$spacing-small * 1.5;
   }
 }
 
 .c-advisor-list__item {
-  margin-bottom: $spacing-medium;
+  padding: $spacing-small;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @include mq(large-up) {
-    margin-bottom: $spacing-large;
+  @include mq(medium-up) {
+    padding: $spacing-small * 1.5;
   }
 }
-
 
 // Advisor
 
 .c-advisor {
   display: flex;
+
+  @include mq(medium-up) {
+    padding-right: $spacing-medium;
+  }
 }
 
 .c-advisor__photo {

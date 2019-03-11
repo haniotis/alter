@@ -187,8 +187,8 @@ team:
     </div>
     <div class="c-section__block">
       <div class="o-grid">
-        <div class="o-grid__item u-1/1 u-2/3@md">
-          <% current_page.data.team.founders.each do |founder| %>
+        <% current_page.data.team.founders.each do |founder| %>
+          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md u-1/4@lg">
             <a href="<%= founder.link %>" class="c-founder" target="_blank">
               <div style="background-image: url('/images/about/team/<%= founder.name %>.jpg')" class="c-founder__photo u-cover"></div>
               <div>
@@ -196,41 +196,54 @@ team:
                 <p class="u-margin-bottom-small"><%= founder.role %></p>
                 <div class="c-founder__logos">
                   <% founder.logos.each do |logo| %>
-                    <img src="/images/about/logos/<%= logo %>.svg" class="u-margin-right-small">
+                    <img src="/images/about/logos/<%= logo %>.svg" class="c-founder__logo">
                   <% end %>
                 </div>
               </div>
             </a>
-          <% end %>
-        </div>
-        <div class="o-grid__item u-1/1 u-1/3@md">
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="c-section__block c-section__block--border">
+      <div class="o-grid">
+
+        <!-- BOD -->
+        <div class="o-grid__item u-1/1 u-1/2@md u-1/3@lg">
+          <h4 class="u-margin-bottom-large u-margin-bottom-x-large@lg">Board of Directors</h4>
           <div class="c-advisor-list">
-            <div class="c-advisor-list__section">
-              <h4 class="c-advisor-list__heading">Board of Directors</h4>
-              <% current_page.data.team.board.each do |member| %>
-                <div class="c-advisor c-advisor-list__item">
+            <% current_page.data.team.board.each do |member| %>
+              <div class="c-advisor-list__item u-1/1">
+                <div class="c-advisor">
                   <div style="background-image: url('/images/about/team/<%= member.name %>.jpg')" class="c-advisor__photo u-cover"></div>
                   <div>
                     <strong class="c-advisor__name"><%= member.pretty_name %></strong>
                     <small class="c-advisor__role"><%= member.role %></small>
                   </div>
                 </div>
-              <% end %>
-            </div>
-            <div class="c-advisor-list__section">
-              <h4 class="c-advisor-list__heading">Global Advisors</h4>
-              <% current_page.data.team.advisors.each do |advisor| %>
-                <div class="c-advisor c-advisor-list__item">
-                  <div style="background-image: url('/images/about/team/<%= advisor.name %>.jpg')" class="c-advisor__photo u-cover"></div>
-                  <div>
-                    <strong class="c-advisor__name"><%= advisor.pretty_name %></strong>
-                    <small class="c-advisor__role"><%= advisor.role %></small>
-                  </div>
-                </div>
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           </div>
         </div>
+
+        <!-- Advisors -->
+        <div class="o-grid__item u-1/1 u-1/2@md u-2/3@lg">
+          <h4 class="u-margin-bottom-large u-margin-bottom-x-large@lg">Global Advisors</h4>
+          <div class="c-advisor-list">
+            <% current_page.data.team.advisors.each do |member| %>
+              <div class="c-advisor-list__item u-1/1 u-1/2@lg">
+                <div class="c-advisor">
+                  <div style="background-image: url('/images/about/team/<%= member.name %>.jpg')" class="c-advisor__photo u-cover"></div>
+                  <div>
+                    <strong class="c-advisor__name"><%= member.pretty_name %></strong>
+                    <small class="c-advisor__role"><%= member.role %></small>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
