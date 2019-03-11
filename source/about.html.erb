@@ -64,22 +64,34 @@ team:
       pretty_name: Jesse Sullivan
       role: "Founder/CEO"
       link: https://www.linkedin.com/in/jsully3/
-      bio:
+      logos:
+        - dod
+        - stanford
+        - oxford
     - name: ozair
       pretty_name: Ozair Ali
       role: "Co-Founder/COO"
       link: https://www.linkedin.com/in/ozairali/
-      bio:
+      logos:
+        - dalberg
+        - stanford
+        - harvard
     - name: rita
       pretty_name: Rita Chang
       role: "Chief Marketing Officer"
       link: https://www.linkedin.com/in/ritachang/
-      bio:
+      logos:
+        - nike
+        - under-armour
+        - wharton
     - name: kimh
       pretty_name: Kim Horwitz
       role: "Director of Partnerships"
       link: https://www.linkedin.com/in/kimhorwitz/
-      bio:
+      logos:
+        - affirm
+        - devresults
+        - gwu
   board:
     - name: jessica
       pretty_name: Jessica Jackley
@@ -162,9 +174,6 @@ team:
         <% end %>
       </div>
     </div>
-    <div class="c-section__block u-text-center">
-      <p><small>Launching in Spring 2019: Indonesia, Kenya, South Africa, USA, and Vietnam.</small></p>
-    </div>
   </div>
 </section>
 
@@ -184,7 +193,12 @@ team:
               <div style="background-image: url('/images/about/team/<%= founder.name %>.jpg')" class="c-founder__photo u-cover"></div>
               <div>
                 <h3 class="c-founder__name"><%= founder.pretty_name %></h3>
-                <p><%= founder.role %></p>
+                <p class="u-margin-bottom-small"><%= founder.role %></p>
+                <div class="c-founder__logos">
+                  <% founder.logos.each do |logo| %>
+                    <img src="/images/about/logos/<%= logo %>.svg" class="u-margin-right-small">
+                  <% end %>
+                </div>
               </div>
             </a>
           <% end %>

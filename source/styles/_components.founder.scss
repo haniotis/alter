@@ -53,10 +53,10 @@
   margin-bottom: $spacing-tiny;
 }
 
-.c-founder__bio {
-  display: block;
+.c-founder__logos {
+  position: relative;
 
-  @include mq(medium-up) {
-    margin-top: -$spacing-small;
+  img {
+    // filter: grayscale(100%);
   }
 }
