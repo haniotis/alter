@@ -5,22 +5,6 @@ $('.js-toggle-nav').click(function() {
 });
 
 
-// Video
-
-$('.js-trigger-video').click(function() {
-  $('.js-video-modal').toggleClass("is-visible");
-  $('.js-page').toggleClass("is-clipped");
-});
-
-$('.js-open-video').click(function() {
-  $('.js-video')[0].src += "?autoplay=1";
-});
-
-$('.js-close-video').click(function() {
-  $('.js-video')[0].src += "?autoplay=0";
-});
-
-
 // Fixed nav
 
 $(function() {
