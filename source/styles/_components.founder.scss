@@ -6,6 +6,14 @@
   @include mq(small-up) {
     margin-bottom: $spacing-medium;
   }
+
+  @include mq(medium-up) {
+    margin-bottom: $spacing-large;
+  }
+
+  @include mq(large-up) {
+    margin-bottom: $spacing-x-large;
+  }
 }
 
 .c-founder__photo {
