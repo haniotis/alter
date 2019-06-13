@@ -8,42 +8,109 @@ header:
     - name: Transform
 
 ventures:
+  - name: aerobotics
+    logo_width: 150
+    description: With an MIT Master’s in aerospace, James Paterson co-founded Aerobotics to give data insights via drones for tree crop farmers.
+    country: south-africa
   - name: ahg
-    logo_width: 108
-    description: Sanzar leads this integrated business services group dedicated to courage, integrity, and innovation.
+    logo_width: 104
+    description: UPenn alumnus Sanzar Kakar leads AHG, which provides integrated tech, financial, compliance, and project management services for 700+ clients.
+    country: afghanistan
     featured: true
   - name: alamesa
-    logo_width: 100
-    description: Yondainer leads Cuba’s first and most widely used restaurant app.
+    logo_width: 96
+    description: An Americas Quarterly Top 5 Entrepreneur, Yondainer Gutiérrez co-founded AlaMesa - Cuba’s first and most widely used restaurant app.
+    country: cuba
   - name: chaldal
     logo_width: 138
-    description: Backed by the IFC & Y Combinator, Wharton alumnus Waseem runs the country's top online grocery retailer to help consumers bypass serious traffic concerns.
+    description: Wharton grad Waseem Alim started YC-backed Chaldal, Bangladesh’s top grocery e-tailer, giving consumers access to the best grocery selection while bypassing some of the world’s worst traffic.
+    country: bangladesh
   - name: city-mart
     logo_width: 130
-    description: Win Win Tint, Forbes top 50 women in Asia, runs the largest retailer in Myanmar with 10,000 employees.
+    description: Forbes 50 Power Businesswomen in Asia Win Win Tint leads Myanmar's largest and most efficient retailer, City Mart.
+    country: myanmar
     featured: true
+  - name: creditenable
+    logo_width: 160
+    description: Georgetown/Columbia grad Nadia Sood uses proprietary data analytics, deep learning, and AI to create a more efficient and empowered SME lending market in India and beyond.
+    country: india
+  - name: ecotruck
+    logo_width: 106
+    description: NYU computer science PhD Anh Le is taking on Vietnam’s $24B transportation logistics market by streamlining freight logistics.
+    country: vietnam
   - name: impact-terra
     logo_width: 136
-    description: Erwin leads this agricultural tech venture providing farmers the information and connections they need to succeed through their smartphones.
+    description: Ex-McKinsey and -Rocket Internet MD Erwin Sikma is transforming Myanmar's reliance on an inefficient agricultural sector; their app empowers 2M+ farmers with real-time weather, pest, and price updates.
+    country: myanmar
+  - name: investree
+    logo_width: 126
+    description: Adrian Gunadi uses his formidable local and foreign banking leadership experience to pioneer Indonesia’s P2P lending marketplace for SMEs.
+    country: indonesia
+  - name: kargo
+    logo_width: 120
+    description: Ex-Uber GM of Indonesia, co-founder Tiger Fang, is optimizing trucking logistics across the country.
+    country: indonesia
+  - name: kenzie
+    logo_width: 96
+    description: After founding AgilityIO, Chok Ooi is now founder of Kenzie, an innovative school training the next generation of tech hires.
+    country: usa
   - name: kreyol-essence
     logo_width: 130
-    description: Yve-Car runs a Haitian beauty products company that supports 1500 farmers.
+    description: Founded by Penn/Cornell-alumna Yve-Car Momperousse, Kreyol Essence is Haiti's 1st agribusiness integrating traditional castor oil in beauty products for international retailers like Whole Foods.
+    country: haiti
     featured: true
+  - name: lori
+    logo_width: 92
+    description: Harvard MBA and South African native Josh Sandler founded Lori Systems to optimize cargo transport across Africa.
+    country: kenya
+  - name: may
+    logo_width: 160
+    description: MIT PhD and ex-Toyota Director of Autonomous Driving Edwin Olson is reimagining autonomous, electric vehicles of enterprise applications.
+    country: usa
+  - name: mfs
+    logo_width: 154
+    description: Ex-MTN and -PwC Dare Okoudju leads MFS Africa, the continent’s mobile money gateway.
+    country: south-africa
   - name: oway
     logo_width: 120
-    description: Nay Aung, of Google and Stanford, runs the Expedia and the Uber of Myanmar with 1500 employees.
+    description: Ex-Googler and Stanford/LSE alumnus Nay Aung runs Oway, Myanmar's top online travel site for consumers and B2B clients.
+    country: myanmar
   - name: paga
     logo_width: 148
-    description: Nigeria’s largest mobile money provider is run by Stanford GSB- and Cisco-alumnus Tayo.
+    description: Stanford GSB alumnus Tayo Oviosu founded Paga, Nigeria’s leading mobile money service that is solving the use of cash.
+    country: nigeria
   - name: pathao
     logo_width: 124
-    description: Elius leads a team of 500+ employees, including ex-Uber and -Goldman Sachs talent, to create the country’s leading ridesharing and lifestyle app.
+    description: Forbes 30 Under 30 co-founder Elius Hussain is easing some of the world’s worst traffic through an incredibly efficient platform for ride-sharing, food delivery, logistics and payments.
+    country: bangladesh
   - name: paystack
     logo_width: 166
     description: Shola leads the Stripe of Africa (and invested in by Stripe).
+    country: nigeria
   - name: praava-health
     logo_width: 160
     description: With a background at Harvard, Columbia, BCG, and the World Bank, Sylvana is transforming healthcare for the country’s growing middle class.
+    country: bangladesh
+  - name: shipper
+    logo_width: 130
+    description: Ex-Floodgate Phil Opamuratawongse and serial entrepreneur Budi Handoko founded Shipper to help e-commerce businesses streamline logistics.
+    country: indonesia
+  - name: sokowatch
+    logo_width: 160
+    description: Forbes 30 Under 30 Daniel Yu is reinventing informal retail across Africa through Sokowatch's logistics platform.
+    country: kenya
+  - name: telio
+    logo_width: 100
+    description: Backed by Sequoia, Telio is the B2B commerce platform brainchild of fintech mastermind Sy Phong Bui.
+    country: vietnam
+  - name: workit
+    logo_width: 170
+    description: Serial entrepreneurs Lisa Mclaughlin & Robert Mcintosh lead WorkIt, the on-demand evidence-based treatment for addiction that has 90%+ retention of stabilized clients.
+    country: usa
+  - name: yalu
+    logo_width: 130
+    description: Ex-McKinsey Nkazi Sokhulu is shaking up South Africa’s insurance industry with Yalu, offering consumers more affordable and transparent policies.
+    country: south-africa
 ---
 
 <div class="c-ventures-header">
@@ -56,11 +123,11 @@ ventures:
     <% end %>
   </div>
   <div class="u-hide--medium-down">
-    <%= partial('partials/down_arrow', :locals => { :link => "#myanmar" }) %>
+    <%= partial('partials/down_arrow', :locals => { :link => "#ventures" }) %>
   </div>
 </div>
 
-<div class="c-section c-section--alt">
+<div class="c-section c-section--alt" id="ventures">
   <div class="o-container">
 
     <div class="c-section__block u-text-center">
@@ -70,9 +137,12 @@ ventures:
     <div class="c-section__block">
       <div class="o-grid">
         <% current_page.data.ventures.each do |venture| %>
-          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md">
+          <div class="o-grid__item u-1/2 u-1/3@md u-1/4@xlg">
             <a class="c-venture<% if !venture.featured %> c-venture--inactive<% end %>" href="<% if venture.featured %>/ventures/<%= venture.name %><% else %>#1<% end %>">
-              <p class="c-venture__text"><%= venture.description %></p>
+              <div class="c-venture__overlay">
+                <p class="c-venture__text"><%= venture.description %></p>
+                <img src="/images/flags/<%= venture.country %>.png" class="c-venture__flag" width="32">
+              </div>
               <img src="/images/ventures/<%= venture.name %>.png" class="c-venture__logo" width="<%= venture.logo_width %>">
               <div class="c-venture__photo u-cover" style="background-image: url('/images/ventures/<%= venture.name %>.jpg');"></div>
             </a>

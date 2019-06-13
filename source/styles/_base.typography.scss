@@ -14,7 +14,7 @@ body {
   @include font-size($regular-font-size);
 
   @include mq(medium-up) {
-    line-height: $base-line-height * 1.1;
+    line-height: $base-line-height * 1.05;
   }
 }
 

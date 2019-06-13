@@ -2,19 +2,16 @@
   position: relative;
   display: block;
   width: 100%;
-  padding-bottom: percentage(2/3);
+  padding-bottom: 100%;
   background-color: $black;
-
-  @include mq(small-up) {
-    padding-bottom: 100%;
-  }
+  overflow: hidden;
 }
 
 .c-venture--inactive {
   cursor: default;
 }
 
-.c-venture__text {
+.c-venture__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,15 +19,20 @@
   height: 100%;
   padding: $spacing-large;
   color: $white;
-  background-color: rgba($black, 0.6);
+  background-color: rgba($black, 0.75);
   opacity: 0;
   margin: 0;
   visibility: hidden;
   transition: opacity $animation-time $animation-curve, visibility $animation-time $animation-curve;
+
   z-index: 20; // Position above photo + logo
 
   @include mq(large-up) {
     padding: $spacing-x-large;
+  }
+
+  @include mq(x-large-up) {
+    padding: $spacing-large;
   }
 
   .c-venture:hover & {
@@ -39,19 +41,30 @@
   }
 }
 
+.c-venture__text {
+  line-height: $base-line-height;
+}
+
 .c-venture__photo {
   opacity: 0.4;
   @include cover;
 }
 
+.c-venture__flag {
+  position: absolute;
+  bottom: $spacing-large;
+  left: $spacing-large;
+  z-index: 10; // Position above image
+}
+
 .c-venture__logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  bottom: $spacing-large;
+  left: $spacing-large;
+  transform-origin: bottom left;
   z-index: 10; // Position above image
 
-  @include mq(small-down) {
-    transform: translate3d(-50%, -50%, 0) scale(0.9);
+  @include mq(large-down) {
+    transform: scale(0.8);
   }
 }
