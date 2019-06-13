@@ -52,13 +52,15 @@ where_we_work:
       pretty_name: Nigeria
     - name: pakistan
       pretty_name: Pakistan
+    - name: philippines
+      pretty_name: Philippines
     - name: south-africa
       pretty_name: South Africa
     - name: turkey
       pretty_name: Turkey
       upcoming: true
     - name: united-states
-      pretty_name: United States
+      pretty_name: Midwest US
     - name: vietnam
       pretty_name: Vietnam
 
@@ -206,9 +208,9 @@ team:
       </div>
     </div>
     <div class="c-section__block">
-      <div class="o-grid o-grid--center">
+      <div class="o-grid">
         <% current_page.data.where_we_work.countries.each do |country| %>
-          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md u-1/4@lg u-flex">
+          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md u-1/4@lg u-1/5@xlg u-flex">
             <a href="/ventures/" class="c-country<% if country.upcoming %> c-country--upcoming<% end %>">
               <%= inline_svg("/about/countries/#{country.name}.svg", class: "c-country__map") %>
               <h4 class="c-country__name"><%= country.pretty_name %> <% if country.upcoming %><span class="c-country__tag">2019</span><% end %></h4>

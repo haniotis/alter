@@ -73,6 +73,20 @@
   color: $grey-light;
 }
 
+.c-footer__logo-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c-footer__logo-tagline {
+  color: $grey-light;
+  display: block;
+  margin-top: $spacing-small;
+  @include font-size($tiny-font-size);
+}
+
 .c-footer__logo {
   width: 130px;
   height: 36px;
