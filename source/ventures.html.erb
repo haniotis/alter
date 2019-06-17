@@ -85,7 +85,7 @@ ventures:
     country: bangladesh
   - name: paystack
     logo_width: 166
-    description: Shola Akinlade leads the Stripe of Africa (and invested in by Stripe).
+    description: Shola Akinlade leads Nigeria’s 1st YC-backed venture, Paystack, which helps 35,000+ African businesses get paid by anyone, anywhere.
     country: nigeria
   - name: praava-health
     logo_width: 160
@@ -137,7 +137,7 @@ ventures:
     <div class="c-section__block">
       <div class="o-grid">
         <% current_page.data.ventures.each do |venture| %>
-          <div class="o-grid__item u-1/2 u-1/3@md u-1/4@xlg">
+          <div class="o-grid__item u-1/1 u-1/2@sm u-1/3@md u-1/4@xlg">
             <a class="c-venture<% if !venture.featured %> c-venture--inactive<% end %>" href="<% if venture.featured %>/ventures/<%= venture.name %><% else %>#1<% end %>">
               <div class="c-venture__overlay">
                 <p class="c-venture__text"><%= venture.description %></p>
