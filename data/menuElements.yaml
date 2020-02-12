@@ -1,19 +1,19 @@
 main_menu:
-- title: About Us
-  href: "/about/"
-- title: Our Ventures
-  href: "/ventures/"
-- title: Insights
-  href: "https://medium.com/alterglobal"
-- title: Careers
-  href: "https://jobs.lever.co/alter"
+  - title: About Us
+    href: "/about/"
+  - title: Our Ventures
+    href: "/ventures/"
+  - title: Insights
+    href: "https://medium.com/alterglobal"
+  - title: Careers
+    href: "https://jobs.lever.co/alter"
 
 social_links:
-- title: Facebook
-  href: "https://www.facebook.com/VentureBoldly/"
-- title: Twitter
-  href: "https://twitter.com/Alter_Global"
-- title: Instagram
-  href: "https://www.instagram.com/alter_global/"
-- title: LinkedIn
-  href: "https://www.linkedin.com/company-beta/15077937/"
+  - title: Facebook
+    href: "https://www.facebook.com/VentureBoldly/"
+  - title: Twitter
+    href: "https://twitter.com/Alter_Global"
+  - title: Instagram
+    href: "https://www.instagram.com/alter_global/"
+  - title: LinkedIn
+    href: "https://www.linkedin.com/company/alter-global"
